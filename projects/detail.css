@@ -516,6 +516,8 @@
   margin-top: 18px;
 }
 .shot-full { margin-top: 18px; }
+.feature-card .shot { margin-top: 16px; }
+.shot-sm { max-width: 380px; margin-left: auto; margin-right: auto; }
 
 /* ----- Brand logo (hero title + branding card) ----- */
 .detail-title--logo { line-height: 1; margin-bottom: 16px; }

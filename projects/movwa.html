@@ -45,16 +45,6 @@
     </div>
   </header>
 
-  <!-- Showcase: main service screenshot -->
-  <div class="detail-section" style="padding-bottom:0;">
-    <div class="detail-section-inner">
-      <figure class="shot">
-        <img src="../assets/movwa/movwa2.jpg" alt="MOVWA 홈 - 오늘의 픽 추천 화면" loading="lazy" />
-        <figcaption>홈 화면 — 오늘의 픽 10-Pick 추천</figcaption>
-      </figure>
-    </div>
-  </div>
-
   <!-- A. 기획배경 -->
   <section class="detail-section">
     <div class="detail-section-inner">
@@ -151,27 +141,19 @@
         </p>
       </article>
 
-      <figure class="shot shot-full">
-        <img src="../assets/movwa/movwa10.png" alt="홈 와이어프레임" loading="lazy" />
-        <figcaption>화면 설계 (Wireframe) — 홈</figcaption>
-      </figure>
       <div class="shot-grid">
         <figure class="shot">
-          <img src="../assets/movwa/movwa11.png" alt="영화 상세 와이어프레임" loading="lazy" />
-          <figcaption>Wireframe — 영화 상세</figcaption>
+          <img src="../assets/movwa/wireframe.png" alt="Wireframe 화면 설계" loading="lazy" />
+          <figcaption>화면 설계 (Wireframe) — 메인 / 상세 / 보관함</figcaption>
         </figure>
         <figure class="shot">
-          <img src="../assets/movwa/movwa12.png" alt="보관함 와이어프레임" loading="lazy" />
-          <figcaption>Wireframe — 보관함</figcaption>
+          <img src="../assets/movwa/erd.png" alt="ERD 데이터베이스 구조" loading="lazy" />
+          <figcaption>ERD — 데이터베이스 구조 설계</figcaption>
         </figure>
       </div>
       <figure class="shot shot-full">
         <img src="../assets/movwa/component-tree.png" alt="컴포넌트 구조 설계도" loading="lazy" />
         <figcaption>컴포넌트 구조 설계 — App → Layouts → router → Views · 도메인 컴포넌트</figcaption>
-      </figure>
-      <figure class="shot shot-full">
-        <img src="../assets/movwa/movwa13.png" alt="ERD 데이터베이스 구조" loading="lazy" />
-        <figcaption>ERD — 데이터베이스 구조 설계</figcaption>
       </figure>
       <figure class="shot shot-full">
         <img src="../assets/movwa/srs.png" alt="SRS 요구사항 명세서" loading="lazy" />
@@ -356,7 +338,14 @@
             <code>HomeView.vue</code><code>HomeHero.vue</code><code>RecommendationDeck.vue</code>
             <code>TodaysPick.vue</code><code>MovieActions.vue</code><code>homeStore.js</code>
           </div>
-        </article>
+          <figure class="shot">
+            <img src="../assets/movwa/movwa2.jpg" alt="홈 - 오늘의 픽 추천 화면" loading="lazy" />
+            <figcaption>홈 화면 — 오늘의 픽 10-Pick 추천</figcaption>
+          </figure>
+          <figure class="shot shot-sm">
+            <img src="../assets/movwa/movwa3.jpg" alt="PASS / RATE / LIKE 인터랙션 버튼" loading="lazy" />
+            <figcaption>PASS / RATE / LIKE 인터랙션</figcaption>
+          </figure>
 
         <article class="feature-card">
           <div class="feature-head">
@@ -419,6 +408,10 @@
             <code>LibraryView.vue</code><code>libraryStore.js</code>
             <code>libraryApi.js</code><code>MovieCard.vue</code><code>TheNavbar.vue</code>
           </div>
+          <figure class="shot">
+            <img src="../assets/movwa/movwa7.jpg" alt="보관함 화면" loading="lazy" />
+            <figcaption>보관함 — 나중에 볼 영화 / 평가한 영화(점수별)</figcaption>
+          </figure>
         </article>
 
         <article class="feature-card">
@@ -696,48 +689,6 @@ watch(videoUrl, resetVideoTimer)</pre>
           <li><strong>최적화</strong> — 추천 10개 한정, 히어로 영상 2초 지연 로딩, cast 상위 10명만 표시, requiresAuth route guard, 보관함 가로 스크롤</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- H. 구현 화면 -->
-  <section class="detail-section">
-    <div class="detail-section-inner">
-      <div class="detail-section-head">
-        <span class="detail-section-num">H.</span>
-        <h2 class="detail-section-title">구현 화면</h2>
-        <p class="detail-section-lead">실제 구현한 주요 화면들입니다.</p>
-      </div>
-
-      <div class="shot-grid">
-        <figure class="shot">
-          <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
-          <figcaption>영화 목록 — 박스오피스 순위 / 개봉 예정</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르별 탐색" loading="lazy" />
-          <figcaption>영화 목록 — 장르별 탐색 필터</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/movwa6.jpg" alt="영화 목록 - 정렬" loading="lazy" />
-          <figcaption>영화 목록 — 정렬(인기순 등)</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/movwa7.jpg" alt="보관함" loading="lazy" />
-          <figcaption>보관함 — 나중에 볼 영화 / 평가한 영화(점수별)</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/movwa8.jpg" alt="프로필" loading="lazy" />
-          <figcaption>프로필 — 보관함 요약 + 캘린더</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/movwa9.jpg" alt="프로필 수정 모달" loading="lazy" />
-          <figcaption>프로필 수정 모달</figcaption>
-        </figure>
-      </div>
-      <figure class="shot shot-full">
-        <img src="../assets/movwa/movwa3.jpg" alt="추천 카드 인터랙션 버튼" loading="lazy" />
-        <figcaption>추천 카드 인터랙션 — PASS / RATE / LIKE</figcaption>
-      </figure>
     </div>
   </section>
 
