@@ -19,8 +19,8 @@
     <a href="../index.html#projects" class="cap-tab active">PROJECTS</a>
   </nav>
 
-  <!-- Hero -->
-  <header class="detail-hero">
+  <!-- Hero (cinematic: PPT poster collage) -->
+  <header class="detail-hero movwa-hero">
     <span class="detail-shape detail-shape-1"></span>
     <span class="detail-shape detail-shape-2"></span>
 
@@ -31,30 +31,39 @@
         <img src="../assets/movwa/movwa_logo.png" alt="MOVWA" />
       </h1>
       <p class="detail-tagline">
-        "오늘 뭐 보지?"라는 선택 피로를 줄이기 위해 만든
-        <strong>인터랙션 기반 영화 추천 웹</strong>.<br />
+        "오늘 뭐 보지?"라는 선택 피로를 줄이기 위해 만든 <strong>인터랙션 기반 영화 추천 웹</strong>.<br />
         10개의 카드와 PASS / LIKE / RATE / SAVE 인터랙션으로 취향의 흐름을 만들어갑니다.
-        <em>첫 팀 프로젝트라, 개발보다 기획의 탄탄함에 가장 공을 들인 프로젝트입니다.</em>
       </p>
-      <div class="detail-meta">
-        <span class="detail-meta-item"><strong>PERIOD</strong>2025.12.20 – 12.26 (1주)</span>
-        <span class="detail-meta-item"><strong>TEAM</strong>2인 (박주형 BE · 김태연 FE)</span>
-        <span class="detail-meta-item"><strong>ROLE</strong>기획 주력 · Frontend · 컴포넌트 설계</span>
-        <span class="detail-meta-item"><strong>STACK</strong>Vue 3 · Pinia · Vuetify · Axios</span>
-      </div>
     </div>
   </header>
 
-  <!-- A. 기획배경 -->
+  <!-- A. 프로젝트 개요 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
         <span class="detail-section-num">A.</span>
+        <h2 class="detail-section-title">프로젝트 개요</h2>
+      </div>
+      <dl class="overview-list">
+        <div class="overview-row"><dt>프로젝트명</dt><dd>MOVWA <span class="ov-sub">(MOVIE + WAVE / WATCH)</span></dd></div>
+        <div class="overview-row"><dt>개발 기간</dt><dd>2025.12.20 ~ 12.26 (1주)</dd></div>
+        <div class="overview-row"><dt>팀 구성</dt><dd>2명 (박주형 BE · 김태연 FE)</dd></div>
+        <div class="overview-row"><dt>담당 역할</dt><dd>기획 · 프론트엔드 · 컴포넌트 설계</dd></div>
+        <div class="overview-row"><dt>GitHub</dt><dd><a href="https://github.com/Juaa6o6/movwa" target="_blank" rel="noopener">MOVWA 보러가기 →</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- B. 기획 배경 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">B.</span>
         <h2 class="detail-section-title">기획 배경</h2>
         <p class="detail-section-lead">
           "오늘은 이런 거 말고 좀 다른 걸 보고 싶은데" — <strong>비슷한 장르·이미 본 영화·줄어드는 새로운 시청 경험</strong>이
-          기존 추천 서비스의 한계였습니다. MOVWA(MOVIE+WAVE / MOVIE+WATCH)는
-          <strong>효율 · 상호작용 · 발견</strong> 세 가치로 선택의 부담을 줄이고 취향의 확장을 돕는 영화 추천 서비스입니다.
+          기존 추천 서비스의 한계였습니다. MOVWA는 <strong>효율 · 상호작용 · 발견</strong> 세 가치로
+          선택의 부담을 줄이고 취향의 확장을 돕는 영화 추천 서비스입니다.
         </p>
       </div>
 
@@ -83,11 +92,11 @@
     </div>
   </section>
 
-  <!-- B. 기획 (주력 파트) -->
+  <!-- C. 기획 (주력 파트) -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">B.</span>
+        <span class="detail-section-num">C.</span>
         <h2 class="detail-section-title">기획 — 가장 힘을 쏟은 파트</h2>
         <p class="detail-section-lead">
           첫 팀 프로젝트였던 만큼, 개발 분량보다 <strong>기획의 탄탄함</strong>에 더 많은 시간을 썼습니다.
@@ -159,27 +168,17 @@
         <img src="../assets/movwa/srs.png" alt="SRS 요구사항 명세서" loading="lazy" />
         <figcaption>SRS 요구사항 명세서 — 기능 ID · 우선순위(P0) · User Story</figcaption>
       </figure>
-
-      <div class="mine-callout">
-        <h5>왜 개발보다 기획에 더 힘을 줬나</h5>
-        <ul>
-          <li>1주짜리 첫 팀 프로젝트에서 가장 흔들리는 건 "무엇을, 어떤 흐름으로 만들지"였습니다.
-            화면을 빨리 붙이기보다 <strong>요구사항 명세 · 화면 설계 · 데이터 계약(ERD/API)을 먼저 합의</strong>하면
-            짧은 기간에도 구현이 흔들리지 않고 시행착오를 줄일 수 있다는 것을 배웠습니다.</li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <!-- C. 기술스택 -->
+  <!-- D. 기술 스택 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">C.</span>
+        <span class="detail-section-num">D.</span>
         <h2 class="detail-section-title">내가 사용한 기술과 선정 이유</h2>
         <p class="detail-section-lead">
-          1주 프로젝트에서 화면을 빠르게 안정적으로 붙이기 위해,
-          상태와 API 책임을 처음부터 분리하는 데 집중했습니다.
+          1주 프로젝트에서 화면을 빠르게 안정적으로 붙이기 위해, 상태와 API 책임을 처음부터 분리하는 데 집중했습니다.
           추천 알고리즘·모델·백엔드 API의 최종 구현은 BE 담당이고, 저는 이를 소비하는 FE 구조를 맡았습니다.
         </p>
       </div>
@@ -213,55 +212,113 @@
     </div>
   </section>
 
-  <!-- D. 주요 기능 (전체) -->
+  <!-- E. 아키텍처 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">D.</span>
-        <h2 class="detail-section-title">주요 기능 (전체)</h2>
+        <span class="detail-section-num">E.</span>
+        <h2 class="detail-section-title">아키텍처 & 컴포넌트 설계</h2>
         <p class="detail-section-lead">
-          프로젝트 전체 기능과 담당 영역입니다. 내 담당 기능은 다음 섹션에서 자세히 분리했습니다.
+          화면을 "페이지 · 도메인 컴포넌트 · API/store"로 나눠, 백엔드 API가 붙을 때 바뀌어야 할 위치를 줄였습니다.
+        </p>
+      </div>
+
+      <div class="arch-flow">
+        <div class="arch-node">
+          <h5>Vue SPA</h5>
+          <span class="arch-role">화면 / 상태</span>
+          <ul>
+            <li>View (페이지)</li>
+            <li>도메인 컴포넌트</li>
+            <li>Pinia Store</li>
+          </ul>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-node">
+          <h5>API Module</h5>
+          <span class="arch-role">Axios</span>
+          <ul>
+            <li>base URL · 공통 header</li>
+            <li>토큰 첨부 · 에러 처리</li>
+            <li>authApi / moviesApi / libraryApi</li>
+          </ul>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-node">
+          <h5>Django REST</h5>
+          <span class="arch-role">백엔드 (BE 담당)</span>
+          <ul>
+            <li>Movie / User / Review</li>
+            <li>임베딩 추천 (OpenAI)</li>
+            <li>dj-rest-auth + SimpleJWT</li>
+          </ul>
+        </div>
+      </div>
+      <p class="arch-caption">
+        프론트는 인터랙션을 <b>Pinia store</b>에서 상태로 관리하고 <b>API module</b>로 백엔드와 통신.
+        API 경로가 바뀌어도 화면보다 API module에서 먼저 대응할 수 있게 했습니다.
+      </p>
+
+      <div class="mine-callout">
+        <h5>설계 포인트 — 공통 컴포넌트 & 최적화</h5>
+        <ul>
+          <li><strong>레이아웃 분리</strong> — 인증 화면 AuthLayout / 서비스 화면 DefaultLayout</li>
+          <li><strong>도메인 컴포넌트</strong> — HomeHero · RecommendationDeck · MovieActions · MovieReviewDialog · MovieCard 재사용</li>
+          <li><strong>최적화</strong> — 추천 10개 한정, 히어로 영상 2초 지연 로딩, cast 상위 10명만 표시, requiresAuth route guard, 보관함 가로 스크롤</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- F. 주요 기능 (전체) -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">F.</span>
+        <h2 class="detail-section-title">주요 기능 <span class="section-count">6</span></h2>
+        <p class="detail-section-lead">
+          프로젝트 전체 기능과 담당 영역입니다. 내 담당 기능은 다음 섹션에서 화면과 함께 자세히 분리했습니다.
         </p>
       </div>
 
       <div class="allfeat-list">
         <div class="allfeat-item">
           <span class="allfeat-num">01</span>
-          <div class="allfeat-text"><b>AI 기반 10-Pick 추천<span class="owner">BE · FE</span></b><span>사용자 상태에 따라 10개 영화 추천 배치 제공. 임베딩 추천은 BE, 화면 소비는 FE.</span></div>
+          <div class="allfeat-text"><b>AI 10-Pick 추천 + PASS/LIKE/RATE/SAVE<span class="owner">FE 담당</span></b><span>사용자 상태에 따라 10개 추천 배치. 임베딩 추천 알고리즘은 BE, 화면·인터랙션은 FE.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">02</span>
-          <div class="allfeat-text"><b>PASS / LIKE / RATE / SAVE<span class="owner">FE</span></b><span>추천 카드에서 취향 신호를 빠르게 남기는 인터랙션.</span></div>
+          <div class="allfeat-text"><b>영화 목록 · 탐색<span class="owner">FE 담당</span></b><span>큐레이션(박스오피스·개봉예정), 장르별 필터, 정렬, 검색.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">03</span>
-          <div class="allfeat-text"><b>Daily Like · My Archive<span class="owner">FE</span></b><span>가볍게 LIKE한 영화와 실제 SAVE한 영화를 분리한 보관 흐름.</span></div>
+          <div class="allfeat-text"><b>영화 상세 + 예고편 · 리뷰<span class="owner">FE 담당</span></b><span>예고편, 줄거리·출연진, 별점/텍스트 리뷰, 좋아요/보관/공유.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">04</span>
-          <div class="allfeat-text"><b>영화 상세 · 리뷰<span class="owner">FE</span></b><span>예고편·줄거리·출연진·리뷰 탐색과 별점/텍스트 리뷰 작성.</span></div>
+          <div class="allfeat-text"><b>보관함 (Daily Like · My Archive)<span class="owner">FE 담당</span></b><span>LIKE한 영화(24h 자동 초기화)와 SAVE한 영화·평가 영화를 분리.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">05</span>
-          <div class="allfeat-text"><b>인증 · 회원가입<span class="owner">BE · FE</span></b><span>dj-rest-auth + SimpleJWT 토큰 인증, 인증 라우팅.</span></div>
+          <div class="allfeat-text"><b>인증 · 회원가입<span class="owner">FE 담당</span></b><span>dj-rest-auth + SimpleJWT 토큰 인증, 인증 라우팅(FE) · 인증 API(BE).</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">06</span>
-          <div class="allfeat-text"><b>검색 · 탐색 · 프로필 · 관리자<span class="owner">BE</span></b><span>영화/리뷰 모델, REST API, 추천 알고리즘 최종 구현.</span></div>
+          <div class="allfeat-text"><b>프로필 · 캘린더 · 팔로우<span class="owner">FE 담당</span></b><span>프로필/보관함 요약, 캘린더, 팔로우, 프로필 수정 모달.</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- E. 담당 기능 -->
+  <!-- G. 담당 기능 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">E.</span>
-        <h2 class="detail-section-title">담당 기능 (프론트엔드)</h2>
+        <span class="detail-section-num">G.</span>
+        <h2 class="detail-section-title">담당 기능 <span class="section-count">6 / 6 · FE 전담</span></h2>
         <p class="detail-section-lead">
-          프론트엔드 초기 구조부터 인증, 홈, 영화 목록·탐색, 상세, 보관함, 프로필, 네비게이션까지
-          서비스 흐름 전반의 화면 책임을 맡았습니다.
+          2인 팀의 단독 프론트엔드로, <strong>주요 기능 6개의 화면 전부</strong>를 직접 구현했습니다.
+          초기 구조·인증부터 공통 UI 설계까지 서비스 흐름 전반의 화면 책임을 맡았습니다.
         </p>
       </div>
 
@@ -346,10 +403,40 @@
             <img src="../assets/movwa/movwa3.jpg" alt="PASS / RATE / LIKE 인터랙션 버튼" loading="lazy" />
             <figcaption>PASS / RATE / LIKE 인터랙션</figcaption>
           </figure>
+        </article>
 
         <article class="feature-card">
           <div class="feature-head">
             <span class="feature-num">03</span>
+            <h3 class="feature-title">영화 목록과 탐색 (큐레이션 · 장르 · 정렬)</h3>
+          </div>
+          <p class="feature-body">
+            박스오피스 순위 · 개봉 예정작 등 <strong>큐레이션 섹션</strong>과,
+            <strong>장르별 필터 · 정렬(인기순 등)</strong>로 원하는 영화를 탐색하는 목록 화면을 구현했습니다.
+            가로 스크롤 큐레이션, 그리드 목록, 드롭다운 필터 UI를 구성했습니다.
+          </p>
+          <div class="feature-files">
+            <code>MovieView.vue</code><code>MovieGenreView.vue</code><code>moviesApi.js</code>
+          </div>
+          <div class="shot-grid">
+            <figure class="shot">
+              <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
+              <figcaption>큐레이션 — 박스오피스 순위 / 개봉 예정</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르 필터" loading="lazy" />
+              <figcaption>장르별 탐색 필터</figcaption>
+            </figure>
+          </div>
+          <figure class="shot shot-full">
+            <img src="../assets/movwa/movwa6.jpg" alt="영화 목록 - 정렬" loading="lazy" />
+            <figcaption>정렬 (인기순 등)</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">04</span>
             <h3 class="feature-title">영화 상세 페이지와 리뷰 팝업</h3>
           </div>
           <p class="feature-body">
@@ -381,8 +468,8 @@
 
         <article class="feature-card">
           <div class="feature-head">
-            <span class="feature-num">04</span>
-            <h3 class="feature-title">보관함 초기 구현과 네비게이션</h3>
+            <span class="feature-num">05</span>
+            <h3 class="feature-title">보관함 구현과 네비게이션</h3>
           </div>
           <p class="feature-body">
             저장한 영화와 평가한 영화를 확인하는 보관함을 구성. <strong>탭/섹션/가로 스크롤</strong>로 탐색하게 하고,
@@ -411,35 +498,6 @@
           <figure class="shot">
             <img src="../assets/movwa/movwa7.jpg" alt="보관함 화면" loading="lazy" />
             <figcaption>보관함 — 나중에 볼 영화 / 평가한 영화(점수별)</figcaption>
-          </figure>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-head">
-            <span class="feature-num">05</span>
-            <h3 class="feature-title">영화 목록과 탐색 (큐레이션 · 장르 · 정렬)</h3>
-          </div>
-          <p class="feature-body">
-            박스오피스 순위 · 개봉 예정작 등 <strong>큐레이션 섹션</strong>과,
-            <strong>장르별 필터 · 정렬(인기순 등)</strong>로 원하는 영화를 탐색하는 목록 화면을 구현했습니다.
-            가로 스크롤 큐레이션, 그리드 목록, 드롭다운 필터 UI를 구성했습니다.
-          </p>
-          <div class="feature-files">
-            <code>MovieView.vue</code><code>MovieGenreView.vue</code><code>moviesApi.js</code>
-          </div>
-          <div class="shot-grid">
-            <figure class="shot">
-              <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
-              <figcaption>큐레이션 — 박스오피스 순위 / 개봉 예정</figcaption>
-            </figure>
-            <figure class="shot">
-              <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르 필터" loading="lazy" />
-              <figcaption>장르별 탐색 필터</figcaption>
-            </figure>
-          </div>
-          <figure class="shot shot-full">
-            <img src="../assets/movwa/movwa6.jpg" alt="영화 목록 - 정렬" loading="lazy" />
-            <figcaption>정렬 (인기순 등)</figcaption>
           </figure>
         </article>
 
@@ -482,11 +540,11 @@
     </div>
   </section>
 
-  <!-- F. 트러블슈팅 -->
+  <!-- H. 트러블슈팅 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">F.</span>
+        <span class="detail-section-num">H.</span>
         <h2 class="detail-section-title">트러블슈팅</h2>
         <p class="detail-section-lead">
           API 계약과 화면 상태 사이의 작은 불일치들이 1주 프로젝트의 안정성을 크게 흔들었습니다.
@@ -590,6 +648,37 @@ crewList.value = credits.crew || []</pre>
       </div>
 
       <div class="trouble-card">
+        <h3 class="trouble-title">예고편이 안 나오고 배경 이미지만 — youtube_key null</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            홈 히어로에서 예고편이 재생되지 않고 배경 이미지만 표시됐습니다. 프론트 재생 로직 자체는 정상이었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">
+            백엔드 응답의 <code>youtube_key</code> 필드가 <strong>null</strong>로 내려오고 있었습니다(Serializer 이슈).
+            화면이 아니라 <strong>API 응답 데이터 계약</strong>의 문제였습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            원인을 프론트가 아닌 <strong>BE Serializer</strong>로 특정해 팀에 공유하고, 그 사이 프론트는
+            <code>youtube_key</code>가 없을 때 <strong>배경 이미지로 자연스럽게 폴백</strong>하도록 처리해 화면이 깨지지 않게 했습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">
+            "프론트가 화면만 만드는 게 아니라 <strong>API 응답 계약까지 함께 본다</strong>"는 걸 체감한 사례였습니다.
+            영상 유무와 무관하게 안정적인 히어로를 유지했습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
         <h3 class="trouble-title">히어로 영상 자동 재생과 화면 안정성</h3>
         <div class="trouble-block">
           <span class="trouble-label problem">문제</span>
@@ -653,102 +742,13 @@ watch(videoUrl, resetVideoTimer)</pre>
           <p class="trouble-text">저장/평가 섹션을 분리하고 평가 영화는 점수대별 그룹으로 표시. 빈 그룹은 자동 필터링했습니다.</p>
         </div>
       </div>
-
-      <div class="trouble-card">
-        <h3 class="trouble-title">예고편이 안 나오고 배경 이미지만 — youtube_key null</h3>
-        <div class="trouble-block">
-          <span class="trouble-label problem">문제</span>
-          <p class="trouble-text">
-            홈 히어로에서 예고편이 재생되지 않고 배경 이미지만 표시됐습니다. 프론트 재생 로직 자체는 정상이었습니다.
-          </p>
-        </div>
-        <div class="trouble-block">
-          <span class="trouble-label cause">원인</span>
-          <p class="trouble-text">
-            백엔드 응답의 <code>youtube_key</code> 필드가 <strong>null</strong>로 내려오고 있었습니다(Serializer 이슈).
-            화면이 아니라 <strong>API 응답 데이터 계약</strong>의 문제였습니다.
-          </p>
-        </div>
-        <div class="trouble-block">
-          <span class="trouble-label solve">해결</span>
-          <p class="trouble-text">
-            원인을 프론트가 아닌 <strong>BE Serializer</strong>로 특정해 팀에 공유하고, 그 사이 프론트는
-            <code>youtube_key</code>가 없을 때 <strong>배경 이미지로 자연스럽게 폴백</strong>하도록 처리해 화면이 깨지지 않게 했습니다.
-          </p>
-        </div>
-        <div class="trouble-block">
-          <span class="trouble-label learn">결과</span>
-          <p class="trouble-text">
-            "프론트가 화면만 만드는 게 아니라 <strong>API 응답 계약까지 함께 본다</strong>"는 걸 체감한 사례였습니다.
-            영상 유무와 무관하게 안정적인 히어로를 유지했습니다.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- G. 아키텍처 & 컴포넌트 설계 -->
-  <section class="detail-section">
-    <div class="detail-section-inner">
-      <div class="detail-section-head">
-        <span class="detail-section-num">G.</span>
-        <h2 class="detail-section-title">아키텍처 & 컴포넌트 설계</h2>
-        <p class="detail-section-lead">
-          화면을 "페이지 · 도메인 컴포넌트 · API/store"로 나눠, 백엔드 API가 붙을 때 바뀌어야 할 위치를 줄였습니다.
-        </p>
-      </div>
-
-      <div class="arch-flow">
-        <div class="arch-node">
-          <h5>Vue SPA</h5>
-          <span class="arch-role">화면 / 상태</span>
-          <ul>
-            <li>View (페이지)</li>
-            <li>도메인 컴포넌트</li>
-            <li>Pinia Store</li>
-          </ul>
-        </div>
-        <span class="arch-arrow">→</span>
-        <div class="arch-node">
-          <h5>API Module</h5>
-          <span class="arch-role">Axios</span>
-          <ul>
-            <li>base URL · 공통 header</li>
-            <li>토큰 첨부 · 에러 처리</li>
-            <li>authApi / moviesApi / libraryApi</li>
-          </ul>
-        </div>
-        <span class="arch-arrow">→</span>
-        <div class="arch-node">
-          <h5>Django REST</h5>
-          <span class="arch-role">백엔드 (BE 담당)</span>
-          <ul>
-            <li>Movie / User / Review</li>
-            <li>임베딩 추천 (OpenAI)</li>
-            <li>dj-rest-auth + SimpleJWT</li>
-          </ul>
-        </div>
-      </div>
-      <p class="arch-caption">
-        프론트는 인터랙션을 <b>Pinia store</b>에서 상태로 관리하고 <b>API module</b>로 백엔드와 통신.
-        API 경로가 바뀌어도 화면보다 API module에서 먼저 대응할 수 있게 했습니다.
-      </p>
-
-      <div class="mine-callout">
-        <h5>설계 포인트 — 공통 컴포넌트 & 최적화</h5>
-        <ul>
-          <li><strong>레이아웃 분리</strong> — 인증 화면 AuthLayout / 서비스 화면 DefaultLayout</li>
-          <li><strong>도메인 컴포넌트</strong> — HomeHero · RecommendationDeck · MovieActions · MovieReviewDialog · MovieCard 재사용</li>
-          <li><strong>최적화</strong> — 추천 10개 한정, 히어로 영상 2초 지연 로딩, cast 상위 10명만 표시, requiresAuth route guard, 보관함 가로 스크롤</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Outro -->
+  <!-- Outro / 회고 -->
   <section class="detail-outro">
     <div class="outro-inner">
-      <span class="outro-eyebrow">in the end</span>
+      <span class="outro-eyebrow">retrospective</span>
       <h2 class="outro-title">화면이 아니라 흐름을 만든다</h2>
       <p class="outro-text">
         MOVWA를 만들면서 가장 크게 배운 점은 프론트엔드는 화면을 배치하는 일만이 아니라
