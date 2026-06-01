@@ -43,6 +43,16 @@
     </div>
   </header>
 
+  <!-- Showcase: main service screenshot -->
+  <div class="detail-section" style="padding-bottom:0;">
+    <div class="detail-section-inner">
+      <figure class="shot">
+        <img src="../assets/movwa/main-service.png" alt="MOVWA 메인 10-Pick 추천 화면" loading="lazy" />
+        <figcaption>메인 10-Pick 추천 화면 — PASS / RATE / LIKE 인터랙션과 추천 덱</figcaption>
+      </figure>
+    </div>
+  </div>
+
   <!-- A. 기획배경 -->
   <section class="detail-section">
     <div class="detail-section-inner">
@@ -50,9 +60,9 @@
         <span class="detail-section-num">A.</span>
         <h2 class="detail-section-title">기획 배경</h2>
         <p class="detail-section-lead">
-          영화 추천 서비스가 많은 작품을 보여주는 것만으로는 사용자의 결정을 돕기 어렵습니다.
-          평점·리뷰 영상·커뮤니티·저장 목록을 따로 오가지 않고,
-          한 화면 흐름 안에서 <strong>발견 → 표현 → 다시 찾기</strong>를 모두 해결하고 싶었습니다.
+          "오늘은 이런 거 말고 좀 다른 걸 보고 싶은데" — <strong>비슷한 장르·이미 본 영화·줄어드는 새로운 시청 경험</strong>이
+          기존 추천 서비스의 한계였습니다. MOVWA(MOVIE+WAVE / MOVIE+WATCH)는
+          <strong>효율 · 상호작용 · 발견</strong> 세 가치로 선택의 부담을 줄이고 취향의 확장을 돕는 영화 추천 서비스입니다.
         </p>
       </div>
 
@@ -89,34 +99,71 @@
         <h2 class="detail-section-title">기획 — 가장 힘을 쏟은 파트</h2>
         <p class="detail-section-lead">
           첫 팀 프로젝트였던 만큼, 개발 분량보다 <strong>기획의 탄탄함</strong>에 더 많은 시간을 썼습니다.
-          서비스 컨셉부터 데이터 계약, 화면 구조까지 직접 정의하고 팀과 합의했습니다.
+          개발(3~4주차)에 들어가기 전, 1~2주차에 요구사항·화면·데이터 구조를 먼저 확정했습니다.
         </p>
       </div>
 
       <article class="feature-card">
-        <div class="feature-label">서비스 기획</div>
-        <ul>
-          <li><strong>네이밍 · 컨셉</strong> — MOVIE+WATCH / MOVIE+WAVE, 핵심 가치를 Discovery · Interaction · Efficiency로 정의</li>
-          <li><strong>인터랙션 기획</strong> — 10-Pick 마이크로 큐레이션, PASS / LIKE / RATE / SAVE 신호 체계, Daily Like와 My Archive 보관 흐름 분리</li>
-        </ul>
-        <div class="feature-label">데이터 · 화면 구조 설계</div>
-        <ul>
-          <li><strong>ERD / API 명세서</strong> 작성 — 화면이 소비할 데이터 계약을 먼저 합의</li>
-          <li><strong>컴포넌트 구조 설계 · 프론트 폴더 구조도</strong> — 페이지 · 도메인 컴포넌트 · store/API로 책임을 나누는 기준</li>
-        </ul>
-        <div class="feature-label">팀 · 협업</div>
-        <ul>
-          <li><strong>Notion 팀 프로젝트 관리</strong> — 기획 회의, 투두 트래커, 발표 일정 운영</li>
-          <li>로고 · 브랜딩 제작</li>
-        </ul>
+        <div class="feature-label">기획 우선(Planning-first) 개발 타임라인</div>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+            <div class="flow-text"><strong>1주차</strong> — SRS 요구사항 명세서</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+            <div class="flow-text"><strong>2주차</strong> — 화면 설계(Wireframe) · 컴포넌트 구조 설계</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+            <div class="flow-text"><strong>2~3주차</strong> — ERD · API 명세 (Swagger 문서화)</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-col"><div class="flow-dot"></div></div>
+            <div class="flow-text"><strong>3~4주차</strong> — BackEnd · FrontEnd 구현 → Test</div>
+          </div>
+        </div>
       </article>
+
+      <article class="feature-card">
+        <div class="feature-label">내가 참여한 기획 산출물</div>
+        <ul>
+          <li><strong>SRS 요구사항 명세서</strong> — 기능을 ID · 우선순위(P0) · User Story(Interaction / Logic / Display)로 구조화 (예: AUTH-01 회원가입, REC-01 추천 Hero)</li>
+          <li><strong>화면 설계 (Wireframe)</strong> — 메인 / 영화 상세 / 보관함 페이지 레이아웃</li>
+          <li><strong>컴포넌트 구조 설계</strong> — App → Layouts → router → Views · 도메인 컴포넌트 트리</li>
+          <li><strong>ERD · API 명세</strong> — users / movies / reviews / recommends 관계 설계, Swagger로 API 문서화</li>
+          <li><strong>서비스 기획</strong> — 네이밍(MOVIE+WAVE / WATCH), 가치(효율 · 상호작용 · 발견), 10-Pick · PASS/LIKE/RATE/SAVE 인터랙션, Daily Like(24h 자동 초기화) · My Archive 분리</li>
+        </ul>
+        <div class="feature-files">
+          <code>Figma</code><code>Notion</code><code>Swagger</code><code>Google Sheets</code>
+        </div>
+      </article>
+
+      <div class="shot-grid">
+        <figure class="shot">
+          <img src="../assets/movwa/wireframe.png" alt="Wireframe 화면 설계" loading="lazy" />
+          <figcaption>화면 설계 (Wireframe) — 메인 / 상세 / 보관함</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/movwa/erd.png" alt="ERD 데이터베이스 구조" loading="lazy" />
+          <figcaption>ERD — 데이터베이스 구조 설계</figcaption>
+        </figure>
+      </div>
+      <figure class="shot shot-full">
+        <img src="../assets/movwa/component-tree.png" alt="컴포넌트 구조 설계도" loading="lazy" />
+        <figcaption>컴포넌트 구조 설계 — App → Layouts → router → Views · 도메인 컴포넌트</figcaption>
+      </figure>
+      <figure class="shot shot-full">
+        <img src="../assets/movwa/srs.png" alt="SRS 요구사항 명세서" loading="lazy" />
+        <figcaption>SRS 요구사항 명세서 — 기능 ID · 우선순위(P0) · User Story</figcaption>
+      </figure>
 
       <div class="mine-callout">
         <h5>왜 개발보다 기획에 더 힘을 줬나</h5>
         <ul>
           <li>1주짜리 첫 팀 프로젝트에서 가장 흔들리는 건 "무엇을, 어떤 흐름으로 만들지"였습니다.
-            화면을 빨리 붙이기보다 <strong>서비스 가치 · API 응답 · 상태 전이 · 보관 흐름을 먼저 합의</strong>하면
-            짧은 기간에도 구현이 흔들리지 않는다는 것을 배웠습니다.</li>
+            화면을 빨리 붙이기보다 <strong>요구사항 명세 · 화면 설계 · 데이터 계약(ERD/API)을 먼저 합의</strong>하면
+            짧은 기간에도 구현이 흔들리지 않고 시행착오를 줄일 수 있다는 것을 배웠습니다.</li>
         </ul>
       </div>
     </div>
@@ -223,8 +270,11 @@
             <h3 class="feature-title">프론트엔드 foundation과 인증 흐름</h3>
           </div>
           <p class="feature-body">
-            Vite 기반 Vue 프로젝트에 Vuetify, Pinia, Router, Axios를 연결하고
+            Vite 기반 Vue 프로젝트에 Vuetify · Pinia · Router · Axios를 연결하고
             <strong>랜딩/로그인/회원가입 화면과 인증 route guard</strong>의 초기 구조를 만들었습니다.
+            <code>http.js</code>에 Axios 인스턴스와 <strong>요청 인터셉터</strong>(localStorage accessToken을 Authorization 헤더에 자동 첨부)를 구성하고,
+            Base URL을 <code>VITE_API_BASE_URL</code> 환경변수로 관리했습니다. 로그인 성공 시 JWT(Access/Refresh)를 저장하며,
+            초기 연동에서 발생한 <strong>프론트–백엔드 포트 불일치(404)</strong>도 Base URL 정리로 해결했습니다.
           </p>
           <div class="feature-label">주요 흐름</div>
           <div class="flow-steps">
@@ -257,9 +307,11 @@
             <h3 class="feature-title">홈 추천 화면과 10-Pick 인터랙션</h3>
           </div>
           <p class="feature-body">
-            <strong>현재 영화, 추천 목록, 현재 인덱스, 로딩/음소거 상태</strong>를 homeStore로 분리하고,
-            HomeHero / RecommendationDeck / MovieActions / TodaysPick 컴포넌트로 나눠
-            PASS / LIKE / RATE / SAVE 상태가 충돌하지 않게 했습니다.
+            <strong>현재 영화 · 추천 목록 · 인덱스 · 로딩/음소거 상태</strong>를 homeStore로 분리하고,
+            HomeHero / RecommendationDeck / MovieActions / TodaysPick 컴포넌트로 나눴습니다.
+            하단 추천 포스터를 클릭하면 히어로의 <strong>배경 · 정보 · 예고편이 즉시 전환</strong>되도록 연동하고,
+            TheNavbar는 <code>useRoute</code> 기반 active 상태로, TodaysPick 그리드는 <strong>4열 → 6열</strong>로 정보 밀도를 높였습니다.
+            PASS / LIKE / RATE / SAVE는 단일 status로 관리해 상태 충돌을 막았습니다.
           </p>
           <div class="feature-label">주요 흐름</div>
           <div class="flow-steps">
@@ -314,7 +366,7 @@
           <div class="feature-files">
             <code>MovieDetailView.vue</code><code>MovieHeroSection.vue</code>
             <code>MovieMainContent.vue</code><code>MovieRightPanel.vue</code>
-            <code>MovieReviewDialog.vue</code><code>movieStore.js</code>
+            <code>MovieSideInfo.vue</code><code>MovieReviewDialog.vue</code><code>movieStore.js</code>
           </div>
         </article>
 
@@ -533,6 +585,37 @@ watch(videoUrl, resetVideoTimer)</pre>
         <div class="trouble-block">
           <span class="trouble-label learn">결과</span>
           <p class="trouble-text">저장/평가 섹션을 분리하고 평가 영화는 점수대별 그룹으로 표시. 빈 그룹은 자동 필터링했습니다.</p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">예고편이 안 나오고 배경 이미지만 — youtube_key null</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            홈 히어로에서 예고편이 재생되지 않고 배경 이미지만 표시됐습니다. 프론트 재생 로직 자체는 정상이었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">
+            백엔드 응답의 <code>youtube_key</code> 필드가 <strong>null</strong>로 내려오고 있었습니다(Serializer 이슈).
+            화면이 아니라 <strong>API 응답 데이터 계약</strong>의 문제였습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            원인을 프론트가 아닌 <strong>BE Serializer</strong>로 특정해 팀에 공유하고, 그 사이 프론트는
+            <code>youtube_key</code>가 없을 때 <strong>배경 이미지로 자연스럽게 폴백</strong>하도록 처리해 화면이 깨지지 않게 했습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">
+            "프론트가 화면만 만드는 게 아니라 <strong>API 응답 계약까지 함께 본다</strong>"는 걸 체감한 사례였습니다.
+            영상 유무와 무관하게 안정적인 히어로를 유지했습니다.
+          </p>
         </div>
       </div>
     </div>
