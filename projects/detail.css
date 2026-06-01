@@ -529,16 +529,9 @@
 /* ----- Brand logo (hero title + branding card) ----- */
 .detail-title--logo { line-height: 1; margin-bottom: 16px; }
 .detail-title--logo img { height: clamp(46px, 8vw, 82px); width: auto; display: block; }
-.brand-card { text-align: center; }
-.brand-logo {
-  background: var(--blue-softer);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 34px 20px;
-  margin: 4px 0 14px;
-}
-.brand-logo img { height: clamp(38px, 7vw, 62px); width: auto; }
-.brand-card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.75; margin: 0; }
+.brand-block { text-align: center; margin: 32px 0 10px; }
+.brand-logo-img { height: clamp(42px, 7vw, 66px); width: auto; display: block; margin: 18px auto 16px; }
+.brand-block p { font-size: 13.5px; color: var(--ink-2); line-height: 1.75; max-width: 600px; margin: 0 auto; }
 
 /* ----- MOVWA cinematic hero ----- */
 /* Remove section letter labels (A. B. C. ...) */
@@ -594,6 +587,8 @@
 
 @media (max-width: 720px) {
   .detail-hero { padding: 110px 22px 50px; }
+  .movwa-hero { padding: 0; min-height: 300px; }
+  .movwa-hero .back-link { top: 64px; left: 18px; }
   .detail-section { padding: 48px 22px; }
   .detail-section + .detail-section .detail-section-inner { padding-top: 40px; }
   .feature-card { padding: 22px 20px; }
