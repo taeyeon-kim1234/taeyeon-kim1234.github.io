@@ -19,29 +19,21 @@
     <a href="../index.html#projects" class="cap-tab active">PROJECTS</a>
   </nav>
 
-  <!-- Hero (cinematic: PPT poster collage) -->
+  <!-- Hero (composed movie banner: poster collage + logo) -->
   <header class="detail-hero movwa-hero">
-    <span class="detail-shape detail-shape-1"></span>
-    <span class="detail-shape detail-shape-2"></span>
-
-    <div class="detail-hero-inner">
-      <a href="../index.html#projects" class="back-link">← Back to projects</a>
-      <span class="detail-eyebrow">PROJECT 01 · 관통 프로젝트 · FOUNDATION</span>
-      <h1 class="detail-title detail-title--logo">
-        <img src="../assets/movwa/movwa_logo.png" alt="MOVWA" />
-      </h1>
-      <p class="detail-tagline">
-        "오늘 뭐 보지?"라는 선택 피로를 줄이기 위해 만든 <strong>인터랙션 기반 영화 추천 웹</strong>.<br />
-        10개의 카드와 PASS / LIKE / RATE / SAVE 인터랙션으로 취향의 흐름을 만들어갑니다.
-      </p>
-    </div>
+    <a href="../index.html#projects" class="back-link">← Back to projects</a>
   </header>
 
-  <!-- A. 프로젝트 개요 -->
+  <!-- 프로젝트 개요 -->
   <section class="detail-section">
     <div class="detail-section-inner">
+      <span class="detail-eyebrow">PROJECT 01 · 관통 프로젝트 · FOUNDATION</span>
+      <p class="movwa-intro-tagline">
+        "오늘 뭐 보지?"라는 선택 피로를 줄이기 위해 만든 <strong>인터랙션 기반 영화 추천 웹</strong>.
+        10개의 카드와 PASS / LIKE / RATE / SAVE 인터랙션으로 취향의 흐름을 만들어갑니다.
+      </p>
+
       <div class="detail-section-head">
-        <span class="detail-section-num">A.</span>
         <h2 class="detail-section-title">프로젝트 개요</h2>
       </div>
       <dl class="overview-list">
@@ -54,11 +46,10 @@
     </div>
   </section>
 
-  <!-- B. 기획 배경 -->
+  <!-- 기획 배경 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">B.</span>
         <h2 class="detail-section-title">기획 배경</h2>
         <p class="detail-section-lead">
           "오늘은 이런 거 말고 좀 다른 걸 보고 싶은데" — <strong>비슷한 장르·이미 본 영화·줄어드는 새로운 시청 경험</strong>이
@@ -92,11 +83,10 @@
     </div>
   </section>
 
-  <!-- C. 기획 (주력 파트) -->
+  <!-- 기획 (주력 파트) -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">C.</span>
         <h2 class="detail-section-title">기획 — 가장 힘을 쏟은 파트</h2>
         <p class="detail-section-lead">
           첫 팀 프로젝트였던 만큼, 개발 분량보다 <strong>기획의 탄탄함</strong>에 더 많은 시간을 썼습니다.
@@ -131,7 +121,6 @@
         <ul>
           <li><strong>SRS 요구사항 명세서</strong> — 기능을 ID · 우선순위(P0) · User Story(Interaction / Logic / Display)로 구조화 (예: AUTH-01 회원가입, REC-01 추천 Hero)</li>
           <li><strong>화면 설계 (Wireframe)</strong> — 메인 / 영화 상세 / 보관함 페이지 레이아웃</li>
-          <li><strong>컴포넌트 구조 설계</strong> — App → Layouts → router → Views · 도메인 컴포넌트 트리</li>
           <li><strong>ERD · API 명세</strong> — users / movies / reviews / recommends 관계 설계, Swagger로 API 문서화</li>
           <li><strong>서비스 기획</strong> — 네이밍(MOVIE+WAVE / WATCH), 가치(효율 · 상호작용 · 발견), 10-Pick · PASS/LIKE/RATE/SAVE 인터랙션, Daily Like(24h 자동 초기화) · My Archive 분리</li>
         </ul>
@@ -150,19 +139,13 @@
         </p>
       </article>
 
-      <div class="shot-grid">
-        <figure class="shot">
-          <img src="../assets/movwa/wireframe.png" alt="Wireframe 화면 설계" loading="lazy" />
-          <figcaption>화면 설계 (Wireframe) — 메인 / 상세 / 보관함</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/movwa/erd.png" alt="ERD 데이터베이스 구조" loading="lazy" />
-          <figcaption>ERD — 데이터베이스 구조 설계</figcaption>
-        </figure>
-      </div>
       <figure class="shot shot-full">
-        <img src="../assets/movwa/component-tree.png" alt="컴포넌트 구조 설계도" loading="lazy" />
-        <figcaption>컴포넌트 구조 설계 — App → Layouts → router → Views · 도메인 컴포넌트</figcaption>
+        <img src="../assets/movwa/wireframe.png" alt="Wireframe 화면 설계" loading="lazy" />
+        <figcaption>화면 설계 (Wireframe) — 메인 / 상세 / 보관함</figcaption>
+      </figure>
+      <figure class="shot shot-full">
+        <img src="../assets/movwa/erd.png" alt="ERD 데이터베이스 구조" loading="lazy" />
+        <figcaption>ERD — 데이터베이스 구조 설계</figcaption>
       </figure>
       <figure class="shot shot-full">
         <img src="../assets/movwa/srs.png" alt="SRS 요구사항 명세서" loading="lazy" />
@@ -171,11 +154,10 @@
     </div>
   </section>
 
-  <!-- D. 기술 스택 -->
+  <!-- 기술 스택 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">D.</span>
         <h2 class="detail-section-title">내가 사용한 기술과 선정 이유</h2>
         <p class="detail-section-lead">
           1주 프로젝트에서 화면을 빠르게 안정적으로 붙이기 위해, 상태와 API 책임을 처음부터 분리하는 데 집중했습니다.
@@ -212,11 +194,10 @@
     </div>
   </section>
 
-  <!-- E. 아키텍처 -->
+  <!-- 아키텍처 & 컴포넌트 설계 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">E.</span>
         <h2 class="detail-section-title">아키텍처 & 컴포넌트 설계</h2>
         <p class="detail-section-lead">
           화면을 "페이지 · 도메인 컴포넌트 · API/store"로 나눠, 백엔드 API가 붙을 때 바뀌어야 할 위치를 줄였습니다.
@@ -259,6 +240,11 @@
         API 경로가 바뀌어도 화면보다 API module에서 먼저 대응할 수 있게 했습니다.
       </p>
 
+      <figure class="shot shot-full">
+        <img src="../assets/movwa/component-tree.png" alt="컴포넌트 구조 설계도" loading="lazy" />
+        <figcaption>컴포넌트 구조 설계 — App → Layouts → router → Views · 도메인 컴포넌트</figcaption>
+      </figure>
+
       <div class="mine-callout">
         <h5>설계 포인트 — 공통 컴포넌트 & 최적화</h5>
         <ul>
@@ -270,54 +256,60 @@
     </div>
   </section>
 
-  <!-- F. 주요 기능 (전체) -->
+  <!-- 주요 기능 (전체) -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">F.</span>
-        <h2 class="detail-section-title">주요 기능 <span class="section-count">6</span></h2>
+        <h2 class="detail-section-title">주요 기능 <span class="section-count">8</span></h2>
         <p class="detail-section-lead">
-          프로젝트 전체 기능과 담당 영역입니다. 내 담당 기능은 다음 섹션에서 화면과 함께 자세히 분리했습니다.
+          프론트엔드부터 백엔드까지, MOVWA 서비스 전체의 주요 기능입니다. 이 중 내 담당(FE)은 다음 섹션에서 화면과 함께 자세히 다룹니다.
         </p>
       </div>
 
       <div class="allfeat-list">
         <div class="allfeat-item">
           <span class="allfeat-num">01</span>
-          <div class="allfeat-text"><b>AI 10-Pick 추천 + PASS/LIKE/RATE/SAVE<span class="owner">FE 담당</span></b><span>사용자 상태에 따라 10개 추천 배치. 임베딩 추천 알고리즘은 BE, 화면·인터랙션은 FE.</span></div>
+          <div class="allfeat-text"><b>AI 10-Pick 추천 + PASS/LIKE/RATE/SAVE</b><span>사용자 상태에 따라 10개 추천 배치, 취향 신호 인터랙션.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">02</span>
-          <div class="allfeat-text"><b>영화 목록 · 탐색<span class="owner">FE 담당</span></b><span>큐레이션(박스오피스·개봉예정), 장르별 필터, 정렬, 검색.</span></div>
+          <div class="allfeat-text"><b>영화 목록 · 탐색</b><span>큐레이션(박스오피스·개봉예정), 장르별 필터, 정렬, 검색.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">03</span>
-          <div class="allfeat-text"><b>영화 상세 + 예고편 · 리뷰<span class="owner">FE 담당</span></b><span>예고편, 줄거리·출연진, 별점/텍스트 리뷰, 좋아요/보관/공유.</span></div>
+          <div class="allfeat-text"><b>영화 상세 + 예고편 · 리뷰</b><span>예고편, 줄거리·출연진, 별점/텍스트 리뷰, 좋아요/보관/공유.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">04</span>
-          <div class="allfeat-text"><b>보관함 (Daily Like · My Archive)<span class="owner">FE 담당</span></b><span>LIKE한 영화(24h 자동 초기화)와 SAVE한 영화·평가 영화를 분리.</span></div>
+          <div class="allfeat-text"><b>보관함 (Daily Like · My Archive)</b><span>LIKE한 영화(24h 자동 초기화)와 SAVE한 영화·평가 영화를 분리.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">05</span>
-          <div class="allfeat-text"><b>인증 · 회원가입<span class="owner">FE 담당</span></b><span>dj-rest-auth + SimpleJWT 토큰 인증, 인증 라우팅(FE) · 인증 API(BE).</span></div>
+          <div class="allfeat-text"><b>인증 · 회원가입</b><span>dj-rest-auth + SimpleJWT 토큰 인증, 인증 라우팅.</span></div>
         </div>
         <div class="allfeat-item">
           <span class="allfeat-num">06</span>
-          <div class="allfeat-text"><b>프로필 · 캘린더 · 팔로우<span class="owner">FE 담당</span></b><span>프로필/보관함 요약, 캘린더, 팔로우, 프로필 수정 모달.</span></div>
+          <div class="allfeat-text"><b>프로필 · 캘린더 · 팔로우</b><span>프로필/보관함 요약, 캘린더, 팔로우, 프로필 수정.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">07</span>
+          <div class="allfeat-text"><b>AI 추천 엔진</b><span>OpenAI text-embedding-3-small 임베딩 + 코사인 유사도 추천 알고리즘.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">08</span>
+          <div class="allfeat-text"><b>관리자 · 데이터 수집</b><span>TMDB 데이터 수집, 영화/회원/리뷰 관리(Admin).</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- G. 담당 기능 -->
+  <!-- 담당 기능 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">G.</span>
-        <h2 class="detail-section-title">담당 기능 <span class="section-count">6 / 6 · FE 전담</span></h2>
+        <h2 class="detail-section-title">담당 기능 <span class="section-count">FE 전담</span></h2>
         <p class="detail-section-lead">
-          2인 팀의 단독 프론트엔드로, <strong>주요 기능 6개의 화면 전부</strong>를 직접 구현했습니다.
+          2인 팀의 단독 프론트엔드로, <strong>주요 화면 전부</strong>를 직접 구현했습니다.
           초기 구조·인증부터 공통 UI 설계까지 서비스 흐름 전반의 화면 책임을 맡았습니다.
         </p>
       </div>
@@ -418,16 +410,14 @@
           <div class="feature-files">
             <code>MovieView.vue</code><code>MovieGenreView.vue</code><code>moviesApi.js</code>
           </div>
-          <div class="shot-grid">
-            <figure class="shot">
-              <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
-              <figcaption>큐레이션 — 박스오피스 순위 / 개봉 예정</figcaption>
-            </figure>
-            <figure class="shot">
-              <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르 필터" loading="lazy" />
-              <figcaption>장르별 탐색 필터</figcaption>
-            </figure>
-          </div>
+          <figure class="shot shot-full">
+            <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
+            <figcaption>큐레이션 — 박스오피스 순위 / 개봉 예정</figcaption>
+          </figure>
+          <figure class="shot shot-full">
+            <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르 필터" loading="lazy" />
+            <figcaption>장르별 탐색 필터</figcaption>
+          </figure>
           <figure class="shot shot-full">
             <img src="../assets/movwa/movwa6.jpg" alt="영화 목록 - 정렬" loading="lazy" />
             <figcaption>정렬 (인기순 등)</figcaption>
@@ -540,11 +530,10 @@
     </div>
   </section>
 
-  <!-- H. 트러블슈팅 -->
+  <!-- 트러블슈팅 -->
   <section class="detail-section">
     <div class="detail-section-inner">
       <div class="detail-section-head">
-        <span class="detail-section-num">H.</span>
         <h2 class="detail-section-title">트러블슈팅</h2>
         <p class="detail-section-lead">
           API 계약과 화면 상태 사이의 작은 불일치들이 1주 프로젝트의 안정성을 크게 흔들었습니다.
@@ -745,7 +734,7 @@ watch(videoUrl, resetVideoTimer)</pre>
     </div>
   </section>
 
-  <!-- Outro / 회고 -->
+  <!-- 회고 -->
   <section class="detail-outro">
     <div class="outro-inner">
       <span class="outro-eyebrow">retrospective</span>
