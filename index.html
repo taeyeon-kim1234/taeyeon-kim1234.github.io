@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김태연 | Portfolio</title>
+  <meta name="description" content="김태연 포트폴리오 - AI / Robotics Engineer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="splash-active" data-current-section="home">
+
+  <!-- =========================================================
+       HOME (PPT cover replica)
+       ========================================================= -->
+  <section id="home" class="cover">
+    <!-- Background decorations -->
+    <div class="cover-bg" aria-hidden="true">
+      <img src="assets/cover/image14.png" class="bg-circles bg-circles-tl" alt="" />
+      <img src="assets/cover/image14.png" class="bg-circles bg-circles-br" alt="" />
+      <img src="assets/cover/image22.png" class="bg-halftone bg-halftone-center" alt="" />
+      <img src="assets/cover/image22.png" class="bg-halftone bg-halftone-tl" alt="" />
+      <img src="assets/cover/image13.png" class="bg-stars bg-stars-1" alt="" />
+      <img src="assets/cover/image13.png" class="bg-stars bg-stars-2" alt="" />
+      <img src="assets/cover/image12.png" class="bg-plane bg-plane-tr" alt="" />
+      <img src="assets/cover/image12.png" class="bg-plane bg-plane-bl" alt="" />
+
+      <!-- Pixel arrows recreated with CSS -->
+      <div class="pixel-arrow pixel-arrow-left" aria-hidden="true">
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="pixel-arrow pixel-arrow-right" aria-hidden="true">
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pa-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+
+    <!-- Top corner labels + capsule nav -->
+    <header class="cover-top">
+      <div class="corner-label corner-left">
+        <span class="corner-plus">+</span>
+        <span>김태연 · KIM TAEYEON</span>
+      </div>
+
+      <div class="corner-label corner-right">
+        <span>PORTFOLIO 2026</span>
+        <span class="corner-plus">+</span>
+      </div>
+    </header>
+
+    <!-- 3D letters: PORT / FOLIO -->
+    <div class="title-stack">
+      <div class="title-row title-row-top">
+        <img src="assets/cover/image5.png" class="ltr ltr-p" alt="P" />
+        <img src="assets/cover/image6.png" class="ltr ltr-o1" alt="O" />
+        <img src="assets/cover/image7.png" class="ltr ltr-r" alt="R" />
+        <img src="assets/cover/image8.png" class="ltr ltr-t" alt="T" />
+      </div>
+      <div class="title-row title-row-bottom">
+        <img src="assets/cover/image9.png" class="ltr ltr-f" alt="F" />
+        <img src="assets/cover/image6.png" class="ltr ltr-o2" alt="O" />
+        <img src="assets/cover/image11.png" class="ltr ltr-l" alt="L" />
+        <img src="assets/cover/image10.png" class="ltr ltr-i" alt="I" />
+        <img src="assets/cover/image6.png" class="ltr ltr-o3" alt="O" />
+      </div>
+    </div>
+
+    <button class="splash-cta" id="splashEnter" type="button">
+      <span>CLICK ANYWHERE</span>
+      <span>OR PRESS ENTER</span>
+    </button>
+
+    <!-- Bottom corner labels -->
+    <footer class="cover-bottom">
+      <div class="corner-label corner-left">
+        <span class="corner-plus">+</span>
+        <span id="todayLabel">MAY 28, 2026</span>
+      </div>
+      <div class="corner-label corner-right">
+        <span>AI / ROBOTICS ENGINEER</span>
+        <span class="corner-plus">+</span>
+      </div>
+    </footer>
+
+  </section>
+
+  <!-- Sticky capsule nav (after scrolling past hero) -->
+  <nav class="capsule-nav-sticky" id="capsuleNavSticky">
+    <a href="#introduce" class="cap-tab" data-section="introduce">ABOUT ME</a>
+    <a href="#skills" class="cap-tab" data-section="skills">SKILLS</a>
+    <a href="#projects" class="cap-tab" data-section="projects">PROJECTS</a>
+  </nav>
+
+  <main>
+    <!-- =========================================================
+         ABOUT ME (Introduce) — PPT slide2 INTRODUCTION
+         ========================================================= -->
+    <section id="introduce" class="introduce">
+      <!-- Background decorations -->
+      <div class="sec-deco" aria-hidden="true">
+        <img src="assets/intro/image29.png" class="deco-dotcircle deco-dotcircle-1" alt="" />
+        <img src="assets/intro/image22.png" class="deco-dotcircle deco-dotcircle-2" alt="" />
+        <img src="assets/intro/image20.png" class="deco-star deco-star-l" alt="" />
+        <img src="assets/intro/image20.png" class="deco-star deco-star-r" alt="" />
+        <img src="assets/intro/image28.png" class="deco-dice" alt="" />
+        <img src="assets/intro/image27.png" class="deco-cursor" alt="" />
+      </div>
+
+      <div class="section-inner intro-stage">
+        <!-- Left: big section title + round profile frame -->
+        <div class="intro-left">
+          <h2 class="big-title section-title-block">
+            <span class="section-kicker">01 / ABOUT ME</span>
+            <span class="big-title-2">ABOUT</span>
+            <span class="big-title-1">ME</span>
+          </h2>
+
+          <div class="profile-frame">
+            <span class="pf-pixel pf-pixel-1"></span>
+            <span class="pf-pixel pf-pixel-2"></span>
+            <span class="pf-pixel pf-pixel-3"></span>
+            <span class="pf-pixel pf-pixel-4"></span>
+            <span class="pf-pixel pf-pixel-5"></span>
+            <div class="profile-circle">
+              <div class="profile-inner">
+                <span class="pf-emoji">👩‍💻</span>
+                <span class="pf-cap">profile.png</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: headline + handwriting + body -->
+        <div class="intro-right">
+          <h3 class="pp-headline">
+            <span class="pp-h-1">AI · Robotics</span>
+            <span class="pp-h-2">That Connects<span class="pp-arrow">➜</span></span>
+          </h3>
+
+          <div class="pp-divider"></div>
+
+          <p class="pp-greet">
+            Hi, I&rsquo;m <span class="handwrite">김태연</span>
+          </p>
+          <p class="pp-desc">
+            SSAFY 14기에서 센서·디바이스·실시간 데이터를 사람이 쓰는 서비스로
+            잇는 일에 집중해 왔습니다. EMG·IMU 센서와 ESP32·라즈베리파이,
+            실시간 통신부터 앱·서버까지 — 하드웨어에서 들어온 신호를
+            안정적인 경험으로 풀어내는 것이 제 관심사입니다.
+          </p>
+
+          <ul class="pp-meta">
+            <li><span>+ EMAIL</span> xodus6478@naver.com</li>
+            <li><span>+ ROLE</span> AI / Robotics Engineer</li>
+            <li><span>+ SCHOOL</span> SSAFY 14기 · 동아대학교</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Value cards below -->
+      <div class="section-inner">
+        <div class="intro-grid">
+          <article class="intro-card">
+            <span class="card-tag">+ VALUE 01</span>
+            <div class="card-emoji">🧠</div>
+            <h4>강화학습 & AI 모델</h4>
+            <p>PPO 기반 AMR 자율주행 정책을 직접 학습시키고, YOLOv8을 v1~v7까지 반복 고도화한 경험이 있습니다.</p>
+          </article>
+          <article class="intro-card">
+            <span class="card-tag">+ VALUE 02</span>
+            <div class="card-emoji">🤖</div>
+            <h4>로보틱스 시뮬레이션</h4>
+            <p>Isaac Sim · Isaac Lab · ROS 2 환경에서 멀티로봇 학습 환경과 평가 프레임워크를 구축했습니다.</p>
+          </article>
+          <article class="intro-card">
+            <span class="card-tag">+ VALUE 03</span>
+            <div class="card-emoji">🔗</div>
+            <h4>풀스택 통합 역량</h4>
+            <p>Django REST + Vue 3 + WebSocket으로 시뮬레이션과 웹 관제를 하나의 실시간 파이프라인으로 잇습니다.</p>
+          </article>
+          <article class="intro-card">
+            <span class="card-tag">+ VALUE 04</span>
+            <div class="card-emoji">🔬</div>
+            <h4>실험과 검증의 사이클</h4>
+            <p>가설 → 실험 → 검증 → 재설계의 반복을 학습 일지로 남기고, 좌표·데이터부터 의심하는 습관을 들였습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SKILLS — PPT slide3-ish layout (left big title, right cards)
+         ========================================================= -->
+    <section id="skills" class="skills">
+      <div class="sec-deco" aria-hidden="true">
+        <img src="assets/intro/image20.png" class="deco-star deco-star-tl" alt="" />
+        <img src="assets/intro/image22.png" class="deco-dotcircle deco-dotcircle-br" alt="" />
+      </div>
+
+      <div class="section-inner skills-grid">
+        <div class="skills-left">
+          <h2 class="big-title section-title-block">
+            <span class="section-kicker">02 / SKILLS</span>
+            <span class="big-title-1">SKILLS</span>
+          </h2>
+          <p class="big-sub">
+            Tools <span class="handwrite">I work with</span>
+          </p>
+          <p class="pp-desc light">
+            네 번의 팀 프로젝트(관통·공통·특화·자율)에서 실제로 다뤄본 기술들입니다.
+            강화학습(PPO)·로보틱스 시뮬레이션(Isaac Sim·ROS 2)부터
+            Django·Vue·WebSocket 풀스택 통합, Flutter·IoT 실시간 통신까지 —
+            AI와 로보틱스를 현실에 잇는 전체 스택을 직접 만졌습니다.
+          </p>
+        </div>
+
+        <div class="skills-right">
+          <div class="skills-cats">
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ AI / ML</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" />PyTorch</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/ultralytics/111F68" alt="" />YOLOv8</div>
+                <div class="skill-chip"><span class="chip-mono">🧠</span>PPO · Stable-Baselines3</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/openai/412991" alt="" />OpenAI API</div>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ ROBOTICS / SIMULATION</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="" />Isaac Sim</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="" />Isaac Lab</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/ros/22314E" alt="" />ROS 2</div>
+                <div class="skill-chip"><span class="chip-mono">🗺️</span>RTAB-Map · VSLAM</div>
+                <div class="skill-chip"><span class="chip-mono">🔳</span>ArUco</div>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ BACKEND</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/django/092E20" alt="" />Django REST</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/django/092E20" alt="" />Channels (WS)</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" />FastAPI</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" />PostgreSQL</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/sqlite/003B57" alt="" />SQLite</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/mqtt/660066" alt="" />MQTT</div>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ FRONTEND / APP</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="" />Vue 3</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/pinia/FFD859" alt="" />Pinia</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/flutter/02569B" alt="" />Flutter (MVVM)</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" />TypeScript</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/vite/646CFF" alt="" />Vite</div>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ DEVOPS / INFRA</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" />Docker</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" />Git · GitLab CI</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/caddy/1F88C0" alt="" />Caddy</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/nginx/009639" alt="" />Nginx</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/ubuntu/E95420" alt="" />Linux (Ubuntu)</div>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <h4 class="skill-cat-title">+ LANGUAGES</h4>
+              <div class="skill-chip-row">
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" />Python</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/dart/0175C2" alt="" />Dart</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" />TypeScript / JS</div>
+                <div class="skill-chip"><img src="https://cdn.simpleicons.org/gnubash/4EAA25" alt="" />Bash</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PROJECTS — PPT slide5+ SELECTED WORKS
+         ========================================================= -->
+    <section id="projects" class="projects">
+      <div class="sec-deco" aria-hidden="true">
+        <img src="assets/intro/image22.png" class="deco-dotcircle deco-dotcircle-tl" alt="" />
+        <img src="assets/intro/image20.png" class="deco-star deco-star-br" alt="" />
+      </div>
+
+      <div class="section-inner">
+        <header class="proj-head">
+          <div class="proj-head-left">
+            <h2 class="big-title big-title-dark section-title-block">
+              <span class="section-kicker">03 / PROJECTS</span>
+              <span class="big-title-1">PROJECTS</span>
+            </h2>
+          </div>
+          <div class="proj-head-right">
+            <span class="proj-eyebrow">+ PROJECTS</span>
+            <p class="proj-lead">
+              SSAFY 14기 6개월간 진행한 4개의 팀 프로젝트.<br />
+              AMR 강화학습·로보틱스 비전부터 IoT 앱까지, 카드를 눌러 상세 회고를 보세요.
+            </p>
+          </div>
+        </header>
+
+        <div class="project-grid">
+          <a href="projects/jeokjae.html" class="project-card project-card-blue">
+            <div class="project-card-top">
+              <span class="project-num">03 <span class="project-badge">★ MAIN</span></span>
+              <span class="project-period">2026.02 – 04</span>
+            </div>
+            <div class="project-emoji">🤖</div>
+            <h3 class="project-name">적재적소</h3>
+            <p class="project-sub">특화 프로젝트 · 6인 · AMR 강화학습 + 실시간 관제</p>
+            <p class="project-desc">
+              물류 AMR 자율주행을 PPO 강화학습으로 전환하고,
+              Isaac Sim ↔ Django ↔ Vue를 잇는 양방향 실시간 관제 시스템을 구축했습니다.
+            </p>
+            <div class="project-metrics">
+              <span class="pm"><b>53.1%</b>기여도</span>
+              <span class="pm"><b>109</b>MR</span>
+              <span class="pm"><b>489</b>커밋</span>
+            </div>
+            <div class="project-tags">
+              <span>Isaac Sim</span><span>PPO</span><span>Django</span><span>Vue 3</span>
+            </div>
+            <span class="project-cta">자세히 보기 →</span>
+          </a>
+
+          <a href="projects/imo.html" class="project-card project-card-cyan">
+            <div class="project-card-top">
+              <span class="project-num">04 <span class="project-badge">★ MAIN</span></span>
+              <span class="project-period">2026.04 – 05</span>
+            </div>
+            <div class="project-emoji">🏋️</div>
+            <h3 class="project-name">IMO</h3>
+            <p class="project-sub">자율 프로젝트 · 6인 · 스마트글래스 EMG 운동 코칭</p>
+            <p class="project-desc">
+              EMG·IMU 센서와 라즈베리파이, 스마트글래스 HUD를 묶어
+              운동 중 실시간 피드백을 주는 Flutter 코칭 앱. 50Hz 센서 스트림을 안정적인 UI로 풀어냈습니다.
+            </p>
+            <div class="project-metrics">
+              <span class="pm"><b>50.3%</b>기여도</span>
+              <span class="pm"><b>39</b>MR</span>
+              <span class="pm"><b>325</b>커밋</span>
+            </div>
+            <div class="project-tags">
+              <span>Flutter</span><span>WebSocket</span><span>Raspberry Pi</span>
+            </div>
+            <span class="project-cta">자세히 보기 →</span>
+          </a>
+
+          <a href="projects/ssara.html" class="project-card project-card-blue">
+            <div class="project-card-top">
+              <span class="project-num">02</span>
+              <span class="project-period">2026.01 – 02</span>
+            </div>
+            <div class="project-emoji">👁️</div>
+            <h3 class="project-name">SSARA</h3>
+            <p class="project-sub">공통 프로젝트 · 6인 · AI Vision · 음성비서</p>
+            <p class="project-desc">
+              SpotMicro 로봇의 YOLOv8 객체탐지를 v1→v7까지 고도화하고,
+              VSLAM 좌표 브릿지와 AI 음성비서 '싸라'를 구축했습니다.
+            </p>
+            <div class="project-metrics">
+              <span class="pm"><b>20.9%</b>기여도</span>
+              <span class="pm"><b>7</b>MR</span>
+              <span class="pm"><b>46</b>커밋</span>
+            </div>
+            <div class="project-tags">
+              <span>YOLOv8</span><span>RTAB-Map</span><span>MQTT</span>
+            </div>
+            <span class="project-cta">자세히 보기 →</span>
+          </a>
+
+          <a href="projects/movwa.html" class="project-card project-card-light">
+            <div class="project-card-top">
+              <span class="project-num">01 <span class="project-badge project-badge-muted">FOUNDATION</span></span>
+              <span class="project-period">2025.12</span>
+            </div>
+            <div class="project-emoji">🎬</div>
+            <h3 class="project-name">MOVWA</h3>
+            <p class="project-sub">관통 프로젝트 · 2인 · Vue 영화 추천 (기초 · Git 협업)</p>
+            <p class="project-desc">
+              "오늘 뭐 보지?"를 10장의 카드와 PASS / LIKE / RATE / SAVE 인터랙션으로 푸는
+              영화 추천 웹. Vue 기초와 Git 협업 워크플로우를 익힌 첫 팀 프로젝트.
+            </p>
+            <div class="project-metrics">
+              <span class="pm"><b>40%</b>기여도</span>
+              <span class="pm"><b>8</b>커밋</span>
+            </div>
+            <div class="project-tags">
+              <span>Vue 3</span><span>Pinia</span><span>Vuetify</span>
+            </div>
+            <span class="project-cta">자세히 보기 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT BAR
+         ========================================================= -->
+    <section class="contact-bar">
+      <div class="contact-inner">
+        <a href="mailto:xodus6478@naver.com" class="contact-link">
+          <span class="contact-label">+ EMAIL</span>
+          <span class="contact-value">xodus6478@naver.com</span>
+        </a>
+        <a href="mailto:2027416@donga.ac.kr" class="contact-link">
+          <span class="contact-label">+ SCHOOL</span>
+          <span class="contact-value">2027416@donga.ac.kr</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 김태연. All rights reserved.</span>
+    <span class="footer-sub">Made with ☕ &amp; ✦</span>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

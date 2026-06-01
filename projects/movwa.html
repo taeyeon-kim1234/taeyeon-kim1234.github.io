@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOVWA · 김태연 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body class="detail-body">
+
+  <!-- Sticky capsule navbar -->
+  <nav class="capsule-nav-sticky show detail-nav">
+    <a href="../index.html#home" class="cap-tab">HOME</a>
+    <a href="../index.html#introduce" class="cap-tab">ABOUT ME</a>
+    <a href="../index.html#skills" class="cap-tab">SKILLS</a>
+    <a href="../index.html#projects" class="cap-tab active">PROJECTS</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="detail-hero">
+    <span class="detail-shape detail-shape-1"></span>
+    <span class="detail-shape detail-shape-2"></span>
+
+    <div class="detail-hero-inner">
+      <a href="../index.html#projects" class="back-link">← Back to projects</a>
+      <span class="detail-eyebrow">PROJECT 01 · 관통 프로젝트 · FOUNDATION</span>
+      <h1 class="detail-title">MOVWA<span class="dot-end">.</span></h1>
+      <p class="detail-tagline">
+        "오늘 뭐 보지?"라는 선택 피로를 줄이기 위해 만든
+        <strong>인터랙션 기반 영화 추천 웹</strong>.<br />
+        10개의 카드와 PASS / LIKE / RATE / SAVE 인터랙션으로 취향의 흐름을 만들어갑니다.
+        <em>Vue 기초와 Git 협업 워크플로우를 익힌 첫 팀 프로젝트입니다.</em>
+      </p>
+      <div class="detail-meta">
+        <span class="detail-meta-item"><strong>PERIOD</strong>2025.12.20 – 12.26 (1주)</span>
+        <span class="detail-meta-item"><strong>TEAM</strong>2인 (박주형 BE · 김태연 FE)</span>
+        <span class="detail-meta-item"><strong>ROLE</strong>기획 · Frontend · 컴포넌트 설계</span>
+        <span class="detail-meta-item"><strong>STACK</strong>Vue 3 · Pinia · Vuetify · Axios</span>
+        <span class="detail-meta-item"><strong>기여도</strong>40% · 8 커밋</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- A. 기획배경 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">A.</span>
+        <h2 class="detail-section-title">기획 배경</h2>
+        <p class="detail-section-lead">
+          영화 추천 서비스가 많은 작품을 보여주는 것만으로는 사용자의 결정을 돕기 어렵습니다.
+          평점·리뷰 영상·커뮤니티·저장 목록을 따로 오가지 않고,
+          한 화면 흐름 안에서 <strong>발견 → 표현 → 다시 찾기</strong>를 모두 해결하고 싶었습니다.
+        </p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-num">10</span>
+          <span class="stat-label">PICKS</span>
+          <span class="stat-desc">무한 스크롤 대신 감당 가능한 추천 카드 수</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4</span>
+          <span class="stat-label">ACTIONS</span>
+          <span class="stat-desc">PASS / LIKE / RATE / SAVE</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">2</span>
+          <span class="stat-label">ARCHIVES</span>
+          <span class="stat-desc">Daily Like와 My Archive 분리</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">1536</span>
+          <span class="stat-label">DIMENSIONS</span>
+          <span class="stat-desc">text-embedding-3-small 기반 추천 (BE)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B. 기술스택 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">B.</span>
+        <h2 class="detail-section-title">내가 사용한 기술과 선정 이유</h2>
+        <p class="detail-section-lead">
+          1주 프로젝트에서 화면을 빠르게 안정적으로 붙이기 위해,
+          상태와 API 책임을 처음부터 분리하는 데 집중했습니다.
+          추천 알고리즘·모델·백엔드 API의 최종 구현은 BE 담당이고, 저는 이를 소비하는 FE 구조를 맡았습니다.
+        </p>
+      </div>
+
+      <div class="stack-row">
+        <div class="stack-card">
+          <h4 class="stack-name">Vue 3 + Composition API</h4>
+          <p class="stack-reason">화면별 상태와 computed 값을 선언적으로 분리. 상세의 finalYoutubeUrl, 현재 리뷰, 홈 현재 영화 상태 계산에 사용.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">Pinia Store</h4>
+          <p class="stack-reason">authStore / homeStore / movieStore / libraryStore 4개로 기능별 상태 분리. 화면 코드와 API 호출 책임을 떼어냄.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">Vue Router Guard</h4>
+          <p class="stack-reason">requiresAuth meta로 /home, /movie/:id, /library 인증 라우트 보호.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">Axios API Module</h4>
+          <p class="stack-reason">authApi / moviesApi / libraryApi / reviewsApi / http로 요청 책임 분리. 토큰 헤더, 에러 처리 중복 제거.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">Vuetify</h4>
+          <p class="stack-reason">버튼/다이얼로그/별점/카드/chip/progress UI를 짧은 기간 안에 일관된 밀도로 구현.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">YouTube iframe + TMDB</h4>
+          <p class="stack-reason">예고편/포스터를 통한 영화 탐색 경험. 히어로 영역과 상세 페이지 시각 요소.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. 주요 기능 (전체) -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">C.</span>
+        <h2 class="detail-section-title">주요 기능 (전체)</h2>
+        <p class="detail-section-lead">
+          프로젝트 전체 기능과 담당 영역입니다. 내 담당 기능은 다음 섹션에서 자세히 분리했습니다.
+        </p>
+      </div>
+
+      <div class="allfeat-list">
+        <div class="allfeat-item">
+          <span class="allfeat-num">01</span>
+          <div class="allfeat-text"><b>AI 기반 10-Pick 추천<span class="owner">BE · FE</span></b><span>사용자 상태에 따라 10개 영화 추천 배치 제공. 임베딩 추천은 BE, 화면 소비는 FE.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">02</span>
+          <div class="allfeat-text"><b>PASS / LIKE / RATE / SAVE<span class="owner">FE</span></b><span>추천 카드에서 취향 신호를 빠르게 남기는 인터랙션.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">03</span>
+          <div class="allfeat-text"><b>Daily Like · My Archive<span class="owner">FE</span></b><span>가볍게 LIKE한 영화와 실제 SAVE한 영화를 분리한 보관 흐름.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">04</span>
+          <div class="allfeat-text"><b>영화 상세 · 리뷰<span class="owner">FE</span></b><span>예고편·줄거리·출연진·리뷰 탐색과 별점/텍스트 리뷰 작성.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">05</span>
+          <div class="allfeat-text"><b>인증 · 회원가입<span class="owner">BE · FE</span></b><span>dj-rest-auth + SimpleJWT 토큰 인증, 인증 라우팅.</span></div>
+        </div>
+        <div class="allfeat-item">
+          <span class="allfeat-num">06</span>
+          <div class="allfeat-text"><b>검색 · 탐색 · 프로필 · 관리자<span class="owner">BE</span></b><span>영화/리뷰 모델, REST API, 추천 알고리즘 최종 구현.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D. 담당 기능 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">D.</span>
+        <h2 class="detail-section-title">담당 기능</h2>
+        <p class="detail-section-lead">
+          프론트엔드 초기 구조부터 인증, 홈, 상세, 보관함, 네비게이션까지
+          서비스 흐름 전반의 화면 책임을 맡았습니다.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">01</span>
+            <h3 class="feature-title">프론트엔드 foundation과 인증 흐름</h3>
+          </div>
+          <p class="feature-body">
+            Vite 기반 Vue 프로젝트에 Vuetify, Pinia, Router, Axios를 연결하고
+            <strong>랜딩/로그인/회원가입 화면과 인증 route guard</strong>의 초기 구조를 만들었습니다.
+          </p>
+          <div class="feature-label">주요 흐름</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>LandingView</code> → <code>LoginView</code> / <code>SignupView</code></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>authStore.login()</code> → <code>authApi</code> → http request interceptor</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>localStorage</code> accessToken 저장</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div></div>
+              <div class="flow-text"><code>router.beforeEach</code> requiresAuth → <code>HomeView</code></div>
+            </div>
+          </div>
+          <div class="feature-files">
+            <code>LandingView.vue</code><code>LoginView.vue</code><code>SignupStep1~3.vue</code>
+            <code>authStore.js</code><code>authApi.js</code><code>http.js</code><code>router/index.js</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">02</span>
+            <h3 class="feature-title">홈 추천 화면과 10-Pick 인터랙션</h3>
+          </div>
+          <p class="feature-body">
+            <strong>현재 영화, 추천 목록, 현재 인덱스, 로딩/음소거 상태</strong>를 homeStore로 분리하고,
+            HomeHero / RecommendationDeck / MovieActions / TodaysPick 컴포넌트로 나눠
+            PASS / LIKE / RATE / SAVE 상태가 충돌하지 않게 했습니다.
+          </p>
+          <div class="feature-label">주요 흐름</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>HomeView</code> mounted → <code>homeStore.initHome()</code></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>moviesApi.getRecommendations(10)</code> → HomeHero currentMovie</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text">RecommendationDeck 썸네일 선택 → PASS / LIKE / RATE / SAVE 반영</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div></div>
+              <div class="flow-text">TodaysPick 업데이트 → 상세 페이지 이동</div>
+            </div>
+          </div>
+          <div class="feature-files">
+            <code>HomeView.vue</code><code>HomeHero.vue</code><code>RecommendationDeck.vue</code>
+            <code>TodaysPick.vue</code><code>MovieActions.vue</code><code>homeStore.js</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">03</span>
+            <h3 class="feature-title">영화 상세 페이지와 리뷰 팝업</h3>
+          </div>
+          <p class="feature-body">
+            상세 화면을 <strong>히어로 예고편, 영화 기본 정보, 본문 콘텐츠, 우측 패널</strong>로 분리.
+            상세 API 응답의 credits를 movieStore에서 먼저 파싱해 cast/crew 목록으로 가공하고,
+            별점/텍스트 기반 리뷰 작성 팝업도 함께 구현했습니다.
+          </p>
+          <div class="feature-label">주요 흐름</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>/movie/:id</code> → <code>movieStore.fetchMovieDetail(id)</code></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text">MovieHeroSection / MovieMainContent / MovieRightPanel 분할 렌더</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div></div>
+              <div class="flow-text">MovieReviewDialog → review submit</div>
+            </div>
+          </div>
+          <div class="feature-files">
+            <code>MovieDetailView.vue</code><code>MovieHeroSection.vue</code>
+            <code>MovieMainContent.vue</code><code>MovieRightPanel.vue</code>
+            <code>MovieReviewDialog.vue</code><code>movieStore.js</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">04</span>
+            <h3 class="feature-title">보관함 초기 구현과 네비게이션</h3>
+          </div>
+          <p class="feature-body">
+            저장한 영화와 평가한 영화를 확인하는 보관함을 구성. <strong>탭/섹션/가로 스크롤</strong>로 탐색하게 하고,
+            평가 영화는 점수대별 그룹(5.0 / 4점대 / … / 0점대)으로 분리했습니다.
+            TheNavbar의 현재 경로 기반 active 상태도 함께 개선했습니다.
+          </p>
+          <div class="feature-label">주요 흐름</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text"><code>LibraryView</code> mounted → <code>fetchSavedMovies()</code> / <code>fetchRatedMovies()</code></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div>
+              <div class="flow-text">saved section / rated section (점수 그룹) 표시</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-col"><div class="flow-dot"></div></div>
+              <div class="flow-text">movie card 클릭 → <code>/movie/:id</code></div>
+            </div>
+          </div>
+          <div class="feature-files">
+            <code>LibraryView.vue</code><code>libraryStore.js</code>
+            <code>libraryApi.js</code><code>MovieCard.vue</code><code>TheNavbar.vue</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">05</span>
+            <h3 class="feature-title">공통 UI 흐름과 화면 분할</h3>
+          </div>
+          <p class="feature-body">
+            인증 화면은 <strong>AuthLayout</strong>, 서비스 내부 화면은 <strong>DefaultLayout</strong>로 나누고
+            공통 네비게이션을 TheNavbar로 분리. 반복되는 영화 카드/액션 버튼/히어로 미디어/리뷰 다이얼로그를
+            컴포넌트로 잘라 한 화면 컴포넌트가 비대해지지 않도록 정리했습니다.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. 트러블슈팅 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">E.</span>
+        <h2 class="detail-section-title">트러블슈팅</h2>
+        <p class="detail-section-lead">
+          API 계약과 화면 상태 사이의 작은 불일치들이 1주 프로젝트의 안정성을 크게 흔들었습니다.
+        </p>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">dj-rest-auth 회원가입 payload 불일치</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            화면에서 입력받은 password를 그대로 보내면 dj-rest-auth가 기대하는
+            password1, password2 필드와 맞지 않아 400 응답이 발생했습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">
+            프론트 입력 모델과 백엔드 인증 라이브러리의 표준 필드명이 달랐습니다.
+            화면은 비밀번호를 하나 입력받지만, API는 확인용 필드까지 포함해야 했습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <pre class="code-block">const payload = {
+  email: this.signupForm.email,
+  username: this.signupForm.username,
+  nickname: this.signupForm.nickname,
+  password1: this.signupForm.password,
+  password2: this.signupForm.password,
+}</pre>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">
+            단계별 입력값을 백엔드 인증 API가 기대하는 형태로 변환하는 기준을 만들고,
+            회원가입 연동을 화면별 임시 처리 대신 <code>authStore.signup()</code> 흐름으로 관리하게 됐습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">상세 페이지 credits 응답 타입 불안정</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            credits 값이 문자열 JSON으로 오거나 객체로 오는 경우가 있어,
+            화면에서 직접 credits.cast에 접근하면 런타임 오류 가능성이 컸습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">API 응답 데이터의 직렬화 형태가 화면에서 기대하는 형태와 항상 같지 않았습니다.</p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <pre class="code-block">const credits =
+  typeof data.credits === 'string'
+    ? JSON.parse(data.credits)
+    : data.credits
+
+castList.value = credits.cast ? credits.cast.slice(0, 10) : []
+crewList.value = credits.crew || []</pre>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">상세 화면은 응답 타입 차이를 신경 쓰지 않고 가공된 castList / crewList만 소비하게 됐습니다.</p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">추천 카드 액션 상태 충돌</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            같은 영화에 LIKE, RATE, SAVE를 반복하면 화면상 여러 상태가 동시에 남아
+            오늘의 픽 목록과 현재 카드 상태가 따로 움직였습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">추천 카드의 상태 기준이 명확하지 않으면 버튼별 local state가 서로 충돌합니다.</p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <pre class="code-block">const likeCurrentMovie = async () => {
+  if (!currentMovie.value) return
+  const isAlready = currentMovie.value.status === 'liked'
+  currentMovie.value.status = isAlready ? null : 'liked'
+  if (!isAlready) addToPicks(currentMovie.value)
+  else removeFromPicks(currentMovie.value.id)
+}</pre>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">
+            카드를 단일 <code>status</code>(passed / liked / rated / saved) 기준으로 다루고,
+            toggle 시 오늘의 픽 추가/제거를 함께 일관되게 처리했습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">히어로 영상 자동 재생과 화면 안정성</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            포스터 탐색 중에 영상이 즉시 재생되면 화면이 과하게 흔들리고
+            추천 카드 전환 시 이전 영상이 남았습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">추천 카드 변경, YouTube iframe 로딩, 음소거 상태가 모두 같은 히어로 영역에 얽혀 있었습니다.</p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <pre class="code-block">const resetVideoTimer = () => {
+  showVideo.value = false
+  if (videoTimer) { clearTimeout(videoTimer); videoTimer = null }
+  if (videoUrl.value) {
+    videoTimer = setTimeout(() => { showVideo.value = true }, 2000)
+  }
+}
+watch(() => props.movie?.id, resetVideoTimer, { immediate: true })
+watch(videoUrl, resetVideoTimer)</pre>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">포스터를 먼저 보여주고 2초 뒤 예고편을 띄우며, 영화가 바뀌면 타이머를 초기화해 이전 상태가 남지 않게 했습니다.</p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">보관함 목록과 점수 그룹 표시</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            저장 영화와 평가 영화를 한 목록에 섞으면 의도가 흐려지고,
+            영화가 늘어날수록 탐색성이 떨어졌습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label cause">원인</span>
+          <p class="trouble-text">보관함은 단순 grid가 아니라 저장/평가 섹션, 점수 그룹, 가로 스크롤, 상세 이동을 함께 다뤄야 했습니다.</p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <pre class="code-block">const ratedMoviesGrouped = computed(() => {
+  const groups = [
+    { score: 5, label: '5.0 평가함', list: [] },
+    { score: 4, label: '4점대', list: [] },
+    // ... 3 / 2 / 1 / 0점대
+  ]
+  ratedMoviesRaw.value.forEach((item) => {
+    const groupIndex = 5 - Math.floor(parseFloat(item.rating))
+    if (groups[groupIndex]) groups[groupIndex].list.push(item.movie)
+  })
+  return groups.filter((g) => g.list.length > 0)
+})</pre>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label learn">결과</span>
+          <p class="trouble-text">저장/평가 섹션을 분리하고 평가 영화는 점수대별 그룹으로 표시. 빈 그룹은 자동 필터링했습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F. 아키텍처 & 컴포넌트 설계 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">F.</span>
+        <h2 class="detail-section-title">아키텍처 & 컴포넌트 설계</h2>
+        <p class="detail-section-lead">
+          화면을 "페이지 · 도메인 컴포넌트 · API/store"로 나눠, 백엔드 API가 붙을 때 바뀌어야 할 위치를 줄였습니다.
+        </p>
+      </div>
+
+      <div class="arch-flow">
+        <div class="arch-node">
+          <h5>Vue SPA</h5>
+          <span class="arch-role">화면 / 상태</span>
+          <ul>
+            <li>View (페이지)</li>
+            <li>도메인 컴포넌트</li>
+            <li>Pinia Store</li>
+          </ul>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-node">
+          <h5>API Module</h5>
+          <span class="arch-role">Axios</span>
+          <ul>
+            <li>base URL · 공통 header</li>
+            <li>토큰 첨부 · 에러 처리</li>
+            <li>authApi / moviesApi / libraryApi</li>
+          </ul>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-node">
+          <h5>Django REST</h5>
+          <span class="arch-role">백엔드 (BE 담당)</span>
+          <ul>
+            <li>Movie / User / Review</li>
+            <li>임베딩 추천 (OpenAI)</li>
+            <li>dj-rest-auth + SimpleJWT</li>
+          </ul>
+        </div>
+      </div>
+      <p class="arch-caption">
+        프론트는 인터랙션을 <b>Pinia store</b>에서 상태로 관리하고 <b>API module</b>로 백엔드와 통신.
+        API 경로가 바뀌어도 화면보다 API module에서 먼저 대응할 수 있게 했습니다.
+      </p>
+
+      <div class="mine-callout">
+        <h5>설계 포인트 — 공통 컴포넌트 & 최적화</h5>
+        <ul>
+          <li><strong>레이아웃 분리</strong> — 인증 화면 AuthLayout / 서비스 화면 DefaultLayout</li>
+          <li><strong>도메인 컴포넌트</strong> — HomeHero · RecommendationDeck · MovieActions · MovieReviewDialog · MovieCard 재사용</li>
+          <li><strong>최적화</strong> — 추천 10개 한정, 히어로 영상 2초 지연 로딩, cast 상위 10명만 표시, requiresAuth route guard, 보관함 가로 스크롤</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outro -->
+  <section class="detail-outro">
+    <div class="outro-inner">
+      <span class="outro-eyebrow">in the end</span>
+      <h2 class="outro-title">화면이 아니라 흐름을 만든다</h2>
+      <p class="outro-text">
+        MOVWA를 만들면서 가장 크게 배운 점은 프론트엔드는 화면을 배치하는 일만이 아니라
+        사용자의 선택을 어떤 상태로 해석하고 백엔드 API와 어떤 계약으로 주고받을지 정하는 일이라는 점이었습니다.
+        PASS, LIKE, RATE, SAVE는 버튼 네 개처럼 보이지만, 실제로는 추천 품질·보관함·상세까지 이어지는 사용자 신호였습니다.
+        화면을 만들기 전에 API 응답 예시·빈 상태·에러 상태·상태 전이표를 먼저 합의해야 한다는 것을 배운,
+        Vue와 Git 협업의 좋은 출발점이었습니다.
+      </p>
+      <a href="../index.html#projects" class="outro-back">← 다른 프로젝트 보기</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 김태연. All rights reserved.</span>
+    <span class="footer-sub">Made with ☕ &amp; ✦</span>
+  </footer>
+
+</body>
+</html>

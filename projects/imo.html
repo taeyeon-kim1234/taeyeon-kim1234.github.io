@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMO · 김태연 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body class="detail-body">
+
+  <!-- Sticky capsule navbar -->
+  <nav class="capsule-nav-sticky show detail-nav">
+    <a href="../index.html#home" class="cap-tab">HOME</a>
+    <a href="../index.html#introduce" class="cap-tab">ABOUT ME</a>
+    <a href="../index.html#skills" class="cap-tab">SKILLS</a>
+    <a href="../index.html#projects" class="cap-tab active">PROJECTS</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="detail-hero">
+    <span class="detail-shape detail-shape-1"></span>
+    <span class="detail-shape detail-shape-2"></span>
+
+    <div class="detail-hero-inner">
+      <a href="../index.html#projects" class="back-link">← Back to projects</a>
+      <span class="detail-eyebrow">PROJECT 04 · 자율 프로젝트 · ★ MAIN</span>
+      <h1 class="detail-title">IMO<span class="dot-end">.</span></h1>
+      <p class="detail-tagline">
+        EMG·IMU 센서, Raspberry Pi, 스마트글래스 HUD까지 묶어
+        <strong>운동 중에 바로 피드백을 받는</strong> Flutter 코칭 앱.<br />
+        50Hz 센서 스트림을 80ms 단위로 안정적인 UI로 풀어냈습니다.
+      </p>
+      <div class="detail-meta">
+        <span class="detail-meta-item"><strong>PERIOD</strong>2026.04 – 05 (6주)</span>
+        <span class="detail-meta-item"><strong>TEAM</strong>6인 (FW · Pi · BE · AI · APP)</span>
+        <span class="detail-meta-item"><strong>ROLE</strong>APP / Frontend</span>
+        <span class="detail-meta-item"><strong>STACK</strong>Flutter · Provider · go_router · Dio · SQLite</span>
+        <span class="detail-meta-item"><strong>기여도</strong>50.3% · 39 MR · 325 커밋</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- A. 기획배경 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">A.</span>
+        <h2 class="detail-section-title">기획 배경</h2>
+        <p class="detail-section-lead">
+          홈트레이닝 환경에서 사용자는 자신의 자세, 반복 횟수, 근육 사용 상태를
+          운동 <em>중에</em> 확인하기 어렵습니다.
+          거울/영상/PT의 한계를 넘어 운동 중 즉시 피드백이 가능한 환경을 만들고 싶었습니다.
+        </p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-num">62.9%</span>
+          <span class="stat-label">참여율</span>
+          <span class="stat-desc">2025 국민 생활체육 참여율 (+2.2%p)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4+3</span>
+          <span class="stat-label">SENSORS</span>
+          <span class="stat-desc">EMG 4채널 + IMU 3개</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">50Hz</span>
+          <span class="stat-label">SAMPLING</span>
+          <span class="stat-desc">20ms 주기 ESP32 송신</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">64B</span>
+          <span class="stat-label">PACKET</span>
+          <span class="stat-desc">BINARY_V2, JSON 대비 71.9% 감소</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B. 기술스택 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">B.</span>
+        <h2 class="detail-section-title">내가 사용한 APP / FE 기술</h2>
+        <p class="detail-section-lead">
+          실시간 센서 stream과 화면 상태의 균형을 잡기 위해,
+          ViewModel / Repository / Service로 책임을 먼저 분리했습니다.
+        </p>
+      </div>
+
+      <div class="stack-row">
+        <div class="stack-card">
+          <h4 class="stack-name">Provider / ChangeNotifier</h4>
+          <p class="stack-reason">Pi 실시간 stream을 UI 상태로 변환. notifyListeners() 호출 정책을 직접 제어하기 좋았습니다.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">get_it (DI)</h4>
+          <p class="stack-reason">Service / Repository / UseCase / ViewModel 생성 책임 분리. 화면이 구현체를 직접 만들지 않도록 처리.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">go_router</h4>
+          <p class="stack-reason">운동 준비 → 캘리브레이션 → HUD → 결과/기록/통계 등 긴 흐름을 명시적 route로 정리.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">Dio Interceptor</h4>
+          <p class="stack-reason">access token 첨부, 401 refresh, 원 요청 재시도, 동시 401 single-flight 처리.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">sqflite / SQLite</h4>
+          <p class="stack-reason">운동 결과를 서버 저장 전에 앱 내부에 먼저 저장(local-first). 네트워크 장애 시 결과 유실 방지.</p>
+        </div>
+        <div class="stack-card">
+          <h4 class="stack-name">flutter_svg</h4>
+          <p class="stack-reason">muscle_map key와 SVG path/group id를 연결해 부위별 색상 변경. CustomPainter 좌표 하드코딩보다 확장성↑.</p>
+        </div>
+      </div>
+
+      <div class="stat-row" style="margin-top: 22px;">
+        <div class="stat-card">
+          <span class="stat-num">10·7·9</span>
+          <span class="stat-label">REPO · SERVICE · VM</span>
+          <span class="stat-desc">앱 구조 규모</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">80ms</span>
+          <span class="stat-label">UI THROTTLE</span>
+          <span class="stat-desc">50Hz 입력 → 약 12.5Hz UI notify</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">75%↓</span>
+          <span class="stat-label">NOTIFY</span>
+          <span class="stat-desc">notifyListeners 호출 상한 감소</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">34</span>
+          <span class="stat-label">TESTS</span>
+          <span class="stat-desc">앱 테스트 케이스</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. 담당 기능 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">C.</span>
+        <h2 class="detail-section-title">담당 기능</h2>
+        <p class="detail-section-lead">
+          Pi WebSocket부터 스마트글래스 HUD, 결과 저장, SVG 히트맵까지
+          앱 측 데이터 계약과 UI 상태를 책임졌습니다.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">01</span>
+            <h3 class="feature-title">Pi WebSocket 기반 실시간 운동 흐름</h3>
+          </div>
+          <p class="feature-body">
+            <strong>PiSocketService → DTO → Repository → ViewModel</strong> 흐름으로
+            Pi와 앱의 실시간 메시지 흐름을 구성. submit_workout_plan / sensors_attached /
+            start_calibration / start_workout / workout_event / glass_display_data /
+            session_result의 라이프사이클을 화면 상태로 연결했습니다.
+          </p>
+          <div class="feature-files">
+            <code>workout_setup</code><code>calibration_screen</code>
+            <code>smartglass_display</code><code>session_result</code>
+            <code>history</code><code>stats</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">02</span>
+            <h3 class="feature-title">스마트글래스 HUD와 EMG 1~4 채널 표시</h3>
+          </div>
+          <p class="feature-body">
+            Pi의 glass_display_data.emg_channels를 앱 상태로 추가하고,
+            HUD에서 EMG 1~4를 개별 게이지로 표시. 분리된 채널은 <strong>null</strong>,
+            측정된 0%는 <strong>0</strong>, 데이터 없음은 별도 상태로 다뤄
+            센서 상태를 사용자가 구분할 수 있게 했습니다.
+          </p>
+          <div class="feature-files">
+            <code>SmartglassPiSnapshotAdapter</code><code>SmartglassSessionSnapshot</code>
+            <code>SmartglassDisplayState</code><code>smartglass_display_screen.dart</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">03</span>
+            <h3 class="feature-title">세션 결과 저장과 기록/통계 연결</h3>
+          </div>
+          <p class="feature-body">
+            Pi의 session_result를 <strong>SessionResultDto → WorkoutSession</strong> domain model로 변환.
+            LocalSessionRepository / LocalDbService로 SQLite에 먼저 저장하고,
+            서버 업로드 상태를 <strong>pending / syncing / synced / failed</strong>로 관리하는 기반을 만들었습니다.
+          </p>
+          <div class="feature-files">
+            <code>SessionResultDto</code><code>WorkoutSession</code>
+            <code>EndWorkoutSessionUseCase</code><code>LocalDbService</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">04</span>
+            <h3 class="feature-title">SVG 기반 근육 히트맵</h3>
+          </div>
+          <p class="feature-body">
+            muscle_map 값을 SVG 인체 모델의 path/group id와 매핑해 부위별 근활성도를 색상으로 표시.
+            남/여 전·후면 SVG 4종, 대표 region key 13개, legacy alias 18개를 정규화.
+            <strong>no data / 측정된 0%</strong>의 색상을 분리해 사용자가 의미를 구분할 수 있게 했습니다.
+          </p>
+          <div class="feature-files">
+            <code>BodyHeatmapRegionAdapter</code><code>SvgBodyHeatmapView</code>
+            <code>heatmap_tab.dart</code>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">05</span>
+            <h3 class="feature-title">인증/프로필/통계 UI 안정화</h3>
+          </div>
+          <p class="feature-body">
+            로그인·회원가입·프로필·마이페이지·기록·통계 레이아웃 개선.
+            키보드 overflow는 <strong>LayoutBuilder + SingleChildScrollView + IntrinsicHeight</strong>로,
+            중첩 Scaffold는 <strong>AppScaffold(nested: true)</strong>로 정리했습니다.
+            ImoButton, ImoTextField, BottomNavShell 등 공통 컴포넌트도 함께 정비.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- D. 트러블슈팅 -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <div class="detail-section-head">
+        <span class="detail-section-num">D.</span>
+        <h2 class="detail-section-title">트러블슈팅</h2>
+        <p class="detail-section-lead">
+          실시간 센서·인증·도메인 계약·렌더링 안정성까지
+          앱 측에서 부딪힌 문제들과 해결.
+        </p>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">인증 토큰 갱신 중복 호출</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            홈 진입처럼 여러 API가 동시에 호출되는 상황에서 access token이 만료되면
+            여러 요청이 동시에 401을 받아 각자 refresh를 호출했고,
+            refresh token rotation 환경에서 둘째 요청부터 invalid가 발생할 위험이 있었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            pendingRefresh Future를 공유하는 <strong>single-flight 패턴</strong>으로 refresh를 1회로 묶고,
+            refresh 실패 원인을 unauthorized / network / server / unknown 4종으로 분리해
+            401·403일 때만 logout하도록 정책 조정.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">50Hz 실시간 표시 데이터로 인한 HUD 재빌드</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            glass_display_data가 약 50Hz로 들어오는데, 수신마다 notifyListeners()를 호출하면
+            HUD가 불필요하게 재빌드. EMG 1~4는 이 메시지에만 실려 다른 메시지를 받을 때 채널이 비는 문제도 있었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            <strong>80ms throttled notify</strong>로 입력 50Hz → 약 12.5Hz UI notify로 제한 (~75% 감소).
+            상태 이벤트는 즉시 반영하되 표시 데이터만 throttle.
+            EMG 채널은 마지막 값 carry-over로 메시지 타입 차이에도 게이지가 사라지지 않게.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">캘리브레이션 미응답과 Pi race condition</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            sensors_attached 직후 start_calibration을 바로 보내면
+            Pi 상태머신이 phase 전환을 끝내기 전에 다음 명령을 받아 collection이 시작되지 않았고,
+            응답 미수신 시 앱은 "측정 중"에 무한히 머물렀습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            sensors_attached 이후 <strong>600ms 지연</strong> 후 startCalibration 전송,
+            응답 미수신 시 <strong>25초 timeout</strong>으로 실패 상태 전환.
+            사용자가 무한 측정 화면에 갇히지 않게 됨.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">session_result를 도메인 이벤트로 분리</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            session_result payload는 운동 상태/세트 결과/반복/밸런스/근활성도 등 하위 구조가 복잡.
+            화면에서 바로 파싱하면 결과/기록/통계마다 다른 기준으로 값을 해석할 위험이 있었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            Pi session_result → DTO → WorkoutSession → LocalSessionRepository → SQLite 흐름 확립.
+            workout_sessions_local 테이블 (15 cols / 3 indexes)에 payload_json + 요약 필드를 함께 저장해
+            업로드 실패 시 재시도 정책을 붙일 기반을 만들었습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">muscle_map 스케일과 key 불일치</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            muscle_map이 0~1 ratio인지 0~100 percent인지 흔들리면 결과/기록/통계/히트맵이
+            서로 다른 숫자를 표시할 수 있었습니다. 일부 운동 mapping에서 센서 데이터가 빠지기도 했습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            앱·Pi·백엔드 전 구간 <strong>0~100 percent로 통일</strong>(clamp 헬퍼 적용),
+            대표 region key 13개 + legacy alias 18개를 앱에서 정규화.
+            히트맵·리포트 숫자의 불일치 가능성을 줄였습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">CustomPainter 히트맵의 확장성 문제</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            초기 히트맵은 painter 기반 도형에 가까워 실제 근육 부위 표현이 약했고,
+            성별/전후면/좌우/부위별 색상 변경을 확장하기 어려웠습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            남/여 전·후면 <strong>SVG 4종</strong> + flutter_svg ColorMapper로 SVG id별 색상 변경 구조.
+            no data는 SVG 원본 neutral color, 측정된 0%는 별도 회색으로 분리.
+          </p>
+        </div>
+      </div>
+
+      <div class="trouble-card">
+        <h3 class="trouble-title">키보드 overflow와 nested Scaffold</h3>
+        <div class="trouble-block">
+          <span class="trouble-label problem">문제</span>
+          <p class="trouble-text">
+            로그인/회원가입/프로필 화면에서 키보드가 올라오면 overflow가 발생하고,
+            하단 탭 shell 안에 다시 Scaffold가 들어가면 앱바·바텀이 중첩되었습니다.
+          </p>
+        </div>
+        <div class="trouble-block">
+          <span class="trouble-label solve">해결</span>
+          <p class="trouble-text">
+            LayoutBuilder + SingleChildScrollView + ConstrainedBox + IntrinsicHeight 패턴으로
+            키보드 대응. AppScaffold(nested: true)로 shell 내부 Scaffold 중첩 방지.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outro -->
+  <section class="detail-outro">
+    <div class="outro-inner">
+      <span class="outro-eyebrow">in the end</span>
+      <h2 class="outro-title">실시간을 안정적으로 다룬다는 것</h2>
+      <p class="outro-text">
+        가장 크게 배운 점은 실시간 센서 앱은 "데이터를 받는다"보다
+        "앱이 어떤 단위와 상태로 해석할지 정한다"가 더 중요하다는 점이었습니다.
+        Pi에서 들어오는 메시지 빈도, 결측 상태, 센서 미부착 상태, 단위 스케일이 정리되지 않으면
+        화면은 있어도 사용자는 결과를 믿기 어렵습니다.
+        다음에는 시스템을 나누기 전에 먼저 데이터 계약과 테스트 케이스를 고정해두고 시작하고 싶습니다.
+      </p>
+      <a href="../index.html#projects" class="outro-back">← 다른 프로젝트 보기</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 김태연. All rights reserved.</span>
+    <span class="footer-sub">Made with ☕ &amp; ✦</span>
+  </footer>
+
+</body>
+</html>
