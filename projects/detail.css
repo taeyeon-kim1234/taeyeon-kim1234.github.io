@@ -100,35 +100,40 @@
 
 /* ----- Sections ----- */
 .detail-section {
-  padding: 70px 32px;
+  padding: 62px 32px;
 }
 .detail-section-inner {
-  max-width: 980px;
+  max-width: 940px;
   margin: 0 auto;
 }
 .detail-section + .detail-section { padding-top: 0; }
+.detail-section + .detail-section .detail-section-inner {
+  border-top: 1px solid var(--line);
+  padding-top: 58px;
+}
 
 .detail-section-head {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 .detail-section-num {
   display: inline-block;
   font-family: var(--font-hand);
-  font-size: 32px;
+  font-size: 28px;
   color: var(--blue-primary);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .detail-section-title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
-  margin: 0 0 8px;
-  letter-spacing: -0.8px;
+  margin: 0 0 10px;
+  letter-spacing: -0.6px;
 }
 .detail-section-lead {
   color: var(--ink-2);
   margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.85;
+  max-width: 680px;
 }
 
 /* ----- Stat cards (numbers row) ----- */
@@ -177,13 +182,13 @@
 /* ----- Feature cards ----- */
 .feature-list {
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 .feature-card {
   background: #fff;
   border-radius: var(--radius-md);
   border: 1.5px solid var(--line);
-  padding: 28px 30px;
+  padding: 30px 34px;
   position: relative;
   transition: 0.25s;
 }
@@ -218,7 +223,7 @@
 .feature-body {
   font-size: 14.5px;
   color: var(--ink-2);
-  line-height: 1.75;
+  line-height: 1.8;
   margin: 0 0 14px;
 }
 .feature-body strong {
@@ -575,7 +580,8 @@
 
 @media (max-width: 720px) {
   .detail-hero { padding: 110px 22px 50px; }
-  .detail-section { padding: 50px 22px; }
+  .detail-section { padding: 48px 22px; }
+  .detail-section + .detail-section .detail-section-inner { padding-top: 40px; }
   .feature-card { padding: 22px 20px; }
   .arch-flow { flex-direction: column; }
   .arch-arrow { transform: rotate(90deg); }
