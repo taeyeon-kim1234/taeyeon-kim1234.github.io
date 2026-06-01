@@ -74,6 +74,19 @@
   window.addEventListener("resize", onScroll);
   onScroll();
 
+  /* Arriving with a section hash (e.g. from a project detail page nav):
+     skip the splash entirely and jump straight to that section. */
+  const initialHash = decodeURIComponent(location.hash.replace("#", ""));
+  if (initialHash && initialHash !== "home" && document.getElementById(initialHash)) {
+    clearTimeout(splashTimer);
+    body.classList.remove("splash-active", "splash-exiting");
+    body.classList.add("splash-done");
+    requestAnimationFrame(() => {
+      document.getElementById(initialHash)?.scrollIntoView({ block: "start" });
+      onScroll();
+    });
+  }
+
   /* Cap-tab navigation — works in splash-active AND splash-done states.
      If splash is active, end it first, then jump to the requested section. */
   const scrollToSection = (id) => {

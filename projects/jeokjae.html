@@ -14,8 +14,7 @@
 
   <!-- Sticky capsule navbar -->
   <nav class="capsule-nav-sticky show detail-nav">
-    <a href="../index.html#home" class="cap-tab">HOME</a>
-    <a href="../index.html#introduce" class="cap-tab">ABOUT ME</a>
+    <a href="../index.html#introduce" class="cap-tab">HOME</a>
     <a href="../index.html#skills" class="cap-tab">SKILLS</a>
     <a href="../index.html#projects" class="cap-tab active">PROJECTS</a>
   </nav>
@@ -39,7 +38,6 @@
         <span class="detail-meta-item"><strong>TEAM</strong>6인 (RL · Sim · BE · FE)</span>
         <span class="detail-meta-item"><strong>ROLE</strong>AMR 강화학습 + 웹↔시뮬 통합</span>
         <span class="detail-meta-item"><strong>STACK</strong>Isaac Sim · PPO · Django · Vue 3</span>
-        <span class="detail-meta-item"><strong>기여도</strong>53.1% · 109 MR · 489 커밋</span>
       </div>
     </div>
   </header>
@@ -70,24 +68,24 @@
 
       <div class="stat-row">
         <div class="stat-card">
-          <span class="stat-num">53.1%</span>
-          <span class="stat-label">기여도</span>
-          <span class="stat-desc">팀 내 커밋 활동 비율 (코어 멤버)</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">109</span>
-          <span class="stat-label">MR MERGED</span>
-          <span class="stat-desc">6주간 머지된 Merge Request</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">489</span>
-          <span class="stat-label">COMMITS</span>
-          <span class="stat-desc">6주 / +168K 라인 변경</span>
+          <span class="stat-num">PPO</span>
+          <span class="stat-label">RL POLICY</span>
+          <span class="stat-desc">robot_v4 환경(맵·보상·종료조건) 직접 설계</span>
         </div>
         <div class="stat-card">
           <span class="stat-num">3.8m</span>
           <span class="stat-label">COORD ERROR</span>
           <span class="stat-desc">실측에서 발견한 Y축 좌표 오차 → 전면 재학습</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">6</span>
+          <span class="stat-label">CONTROL EP</span>
+          <span class="stat-desc">DeviceCommand 큐 제어 엔드포인트</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">Sim↔Web</span>
+          <span class="stat-label">PIPELINE</span>
+          <span class="stat-desc">Isaac Sim ↔ Django ↔ Vue 양방향 통합</span>
         </div>
       </div>
     </div>
@@ -441,8 +439,8 @@ for cmd in pending:
         먼저 의심해야 한다는 것을 배웠습니다. 추정 좌표로 8차까지 학습한 뒤 실측에서 3.8m 오차를 발견한 시점,
         가설을 의심하고 좌표 데이터 자체를 갈아엎는 결정을 내렸습니다.
         학습 일지로 의사결정 근거를 남기는 습관이 이때 자리잡았습니다.
-        RL 단독 실험에서 시작해 Django/Vue 통합, ADR·문서·MR 작성까지 책임이 확장되며
-        109개 MR 머지·기여도 53.1%로 사실상 코어 멤버 역할을 수행했습니다.
+        RL 단독 실험에서 시작해 Django/Vue 통합, ADR·문서 작성까지 책임이 확장되며
+        사실상 코어 멤버 역할을 수행했습니다.
       </p>
       <a href="../index.html#projects" class="outro-back">← 다른 프로젝트 보기</a>
     </div>
