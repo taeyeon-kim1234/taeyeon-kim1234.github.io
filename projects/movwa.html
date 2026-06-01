@@ -260,7 +260,7 @@
         <span class="detail-section-num">E.</span>
         <h2 class="detail-section-title">담당 기능 (프론트엔드)</h2>
         <p class="detail-section-lead">
-          프론트엔드 초기 구조부터 인증, 홈, 상세, 보관함, 네비게이션까지
+          프론트엔드 초기 구조부터 인증, 홈, 영화 목록·탐색, 상세, 보관함, 프로필, 네비게이션까지
           서비스 흐름 전반의 화면 책임을 맡았습니다.
         </p>
       </div>
@@ -417,6 +417,59 @@
         <article class="feature-card">
           <div class="feature-head">
             <span class="feature-num">05</span>
+            <h3 class="feature-title">영화 목록과 탐색 (큐레이션 · 장르 · 정렬)</h3>
+          </div>
+          <p class="feature-body">
+            박스오피스 순위 · 개봉 예정작 등 <strong>큐레이션 섹션</strong>과,
+            <strong>장르별 필터 · 정렬(인기순 등)</strong>로 원하는 영화를 탐색하는 목록 화면을 구현했습니다.
+            가로 스크롤 큐레이션, 그리드 목록, 드롭다운 필터 UI를 구성했습니다.
+          </p>
+          <div class="feature-files">
+            <code>MovieView.vue</code><code>MovieGenreView.vue</code><code>moviesApi.js</code>
+          </div>
+          <div class="shot-grid">
+            <figure class="shot">
+              <img src="../assets/movwa/movwa4.jpg" alt="영화 목록 - 박스오피스 순위" loading="lazy" />
+              <figcaption>큐레이션 — 박스오피스 순위 / 개봉 예정</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="../assets/movwa/movwa5.jpg" alt="영화 목록 - 장르 필터" loading="lazy" />
+              <figcaption>장르별 탐색 필터</figcaption>
+            </figure>
+          </div>
+          <figure class="shot shot-full">
+            <img src="../assets/movwa/movwa6.jpg" alt="영화 목록 - 정렬" loading="lazy" />
+            <figcaption>정렬 (인기순 등)</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">06</span>
+            <h3 class="feature-title">프로필과 캘린더</h3>
+          </div>
+          <p class="feature-body">
+            프로필 화면에 <strong>보관함 요약(나중에 볼 / 평가한 / 리뷰)</strong>, 팔로우 · 팔로워, <strong>캘린더</strong>를 배치하고,
+            <strong>프로필 수정 모달</strong>(별명 · 소개 · 이미지)을 구현했습니다.
+          </p>
+          <div class="feature-files">
+            <code>ProfileView.vue</code><code>accountsApi.js</code>
+          </div>
+          <div class="shot-grid">
+            <figure class="shot">
+              <img src="../assets/movwa/movwa8.jpg" alt="프로필 화면" loading="lazy" />
+              <figcaption>프로필 — 보관함 요약 + 캘린더</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="../assets/movwa/movwa9.jpg" alt="프로필 수정 모달" loading="lazy" />
+              <figcaption>프로필 수정 모달</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-num">07</span>
             <h3 class="feature-title">공통 UI 흐름과 화면 분할</h3>
           </div>
           <p class="feature-body">
