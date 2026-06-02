@@ -100,17 +100,6 @@ crewList.value = credits.crew || []</pre> </div> <div class="trouble-block"> <sp
 &#125;</pre> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
 카드를 단일 <code>status</code>(passed / liked / rated / saved) 기준으로 다루고,
             toggle 시 오늘의 픽 추가/제거를 함께 일관되게 처리했습니다.
-</p> </div> </div> <div class="trouble-card"> <h3 class="trouble-title">예고편이 안 나오고 배경 이미지만 — youtube_key null</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
-홈 히어로에서 예고편이 재생되지 않고 배경 이미지만 표시됐습니다. 프론트 재생 로직 자체는 정상이었습니다.
-</p> </div> <div class="trouble-block"> <span class="trouble-label cause">원인</span> <p class="trouble-text">
-백엔드 응답의 <code>youtube_key</code> 필드가 <strong>null</strong>로 내려오고 있었습니다(Serializer 이슈).
-            화면이 아니라 <strong>API 응답 데이터 계약</strong>의 문제였습니다.
-</p> </div> <div class="trouble-block"> <span class="trouble-label solve">해결</span> <p class="trouble-text">
-원인을 프론트가 아닌 <strong>BE Serializer</strong>로 특정해 팀에 공유하고, 그 사이 프론트는
-<code>youtube_key</code>가 없을 때 <strong>배경 이미지로 자연스럽게 폴백</strong>하도록 처리해 화면이 깨지지 않게 했습니다.
-</p> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
-"프론트가 화면만 만드는 게 아니라 <strong>API 응답 계약까지 함께 본다</strong>"는 걸 체감한 사례였습니다.
-            영상 유무와 무관하게 안정적인 히어로를 유지했습니다.
 </p> </div> </div> <div class="trouble-card"> <h3 class="trouble-title">히어로 영상 자동 재생과 화면 안정성</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
 포스터 탐색 중에 영상이 즉시 재생되면 화면이 과하게 흔들리고
             추천 카드 전환 시 이전 영상이 남았습니다.
