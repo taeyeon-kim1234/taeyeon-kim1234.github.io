@@ -1,28 +1,116 @@
 <!DOCTYPE html><html lang="ko"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SSARA · 김태연 Portfolio</title><meta name="description" content="김태연 포트폴리오 - AI / Robotics Engineer"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/Footer.BfVzMhXK.css">
-<link rel="stylesheet" href="/_astro/DetailLayout.BICNSzyE.css"></head> <body class="detail-body">  <nav class="capsule-nav-sticky show detail-nav"> <a href="/#introduce" class="cap-tab" data-section="introduce">HOME</a> <a href="/#skills" class="cap-tab" data-section="skills">SKILLS</a> <a href="/#projects" class="cap-tab active" data-section="projects">PROJECTS</a> </nav>    <header class="detail-hero"> <span class="detail-shape detail-shape-1"></span> <span class="detail-shape detail-shape-2"></span> <div class="detail-hero-inner"> <a href="/#projects" class="back-link">← Back to projects</a> <span class="detail-eyebrow">PROJECT 02 · 공통 프로젝트</span> <h1 class="detail-title">SSARA<span class="dot-end">.</span></h1> <p class="detail-tagline">
-SpotMicro 4족보행 로봇에 <strong>AI 비전</strong>과 <strong>음성비서</strong>를 올린 프로젝트.<br>
-YOLOv8 객체탐지를 <strong>v1 → v7</strong>까지 반복 고도화하고,
-        VSLAM 실시간 좌표 브릿지와 AI 음성비서 '싸라'를 구축했습니다.
-</p> <div class="detail-meta"> <span class="detail-meta-item"><strong>PERIOD</strong>2026.01 – 02</span> <span class="detail-meta-item"><strong>TEAM</strong>6인</span> <span class="detail-meta-item"><strong>ROLE</strong>AI Vision · VSLAM 브릿지 · 음성비서</span> <span class="detail-meta-item"><strong>STACK</strong>YOLOv8 · RTAB-Map · ROS 2 · MQTT</span> </div> </div> </header>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <span class="detail-section-num">A.</span> <h2 class="detail-section-title">기획 배경</h2> <p class="detail-section-lead">
-SpotMicro 4족보행 로봇이 환경을 <em>인식</em>하고, 사용자와 <em>대화</em>하며 움직이게 하는 것이 목표였습니다.
-          저는 로봇의 '눈'(객체탐지)과 '위치 감각'(VSLAM 좌표), 그리고 '귀와 입'(AI 음성비서) 영역을 맡았습니다.
-</p> </div> <div class="stat-row"> <div class="stat-card"> <span class="stat-num">v1→v7</span> <span class="stat-label">YOLO ITER</span> <span class="stat-desc">YOLOv8 학습 이력 7차 고도화 + 성능 검증 리포트</span> </div> <div class="stat-card"> <span class="stat-num">3축</span> <span class="stat-label">MY ROLE</span> <span class="stat-desc">AI Vision · VSLAM 좌표 · 음성비서</span> </div> <div class="stat-card"> <span class="stat-num">VSLAM</span> <span class="stat-label">REALTIME</span> <span class="stat-desc">RTAB-Map 좌표 실시간 전송 파이프라인</span> </div> <div class="stat-card"> <span class="stat-num">싸라</span> <span class="stat-label">AI VOICE</span> <span class="stat-desc">OpenAI 기반 음성비서, VSLAM/상태 연동</span> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <span class="detail-section-num">B.</span> <h2 class="detail-section-title">내가 사용한 기술과 선정 이유</h2> <p class="detail-section-lead">
-로봇의 인식·위치·대화를 각각 담당하는 모듈을 ROS 기반으로 연결했습니다.
-</p> </div> <div class="stack-row"> <div class="stack-card"> <h4 class="stack-name">YOLOv8</h4> <p class="stack-reason">로봇 카메라 기반 객체탐지. 데이터셋·하이퍼파라미터를 바꿔가며 v1~v7까지 반복 학습·성능 검증.</p> </div> <div class="stack-card"> <h4 class="stack-name">RTAB-Map (VSLAM)</h4> <p class="stack-reason">시각 기반 SLAM으로 로봇 위치/맵을 추정. 추정 좌표를 외부 모듈로 실시간 전송.</p> </div> <div class="stack-card"> <h4 class="stack-name">ROS 2 (gae_ws)</h4> <p class="stack-reason">비전·SLAM·음성 모듈 간 토픽 기반 통신. 워크스페이스 구조와 실행 스크립트 구성.</p> </div> <div class="stack-card"> <h4 class="stack-name">MQTT</h4> <p class="stack-reason">로봇 ↔ 외부 시스템 간 경량 메시지 전송. 좌표/상태 브릿지에 사용.</p> </div> <div class="stack-card"> <h4 class="stack-name">OpenAI API</h4> <p class="stack-reason">AI 음성비서 '싸라'의 자연어 응답. 음성 입력을 의도로 해석해 로봇 동작/안내로 연결.</p> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <span class="detail-section-num">C.</span> <h2 class="detail-section-title">담당 기능</h2> <p class="detail-section-lead">
-로봇의 인식(YOLO) · 위치(VSLAM) · 대화(음성비서) 세 축을 담당했습니다.
-</p> </div> <div class="feature-list"> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">01</span> <h3 class="feature-title">YOLOv8 객체탐지 v1 → v7 고도화</h3> </div> <p class="feature-body">
-데이터셋 구성과 학습 설정을 바꿔가며 <strong>v1부터 v7까지 반복 학습</strong>하고,
-            각 버전의 <strong>성능을 검증 리포트로 정리</strong>했습니다.
-            모델 학습 이력과 근거를 기록으로 남겨 팀이 버전 간 성능 변화를 비교할 수 있게 했습니다.
-</p> <div class="feature-files"> <code>YOLOv8 v1~v7</code><code>성능 검증 리포트</code><code>aiot_GAE/docs_taeyeon</code> </div> </article> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">02</span> <h3 class="feature-title">VSLAM 실시간 좌표 브릿지</h3> </div> <p class="feature-body">
-RTAB-Map(VSLAM)이 추정한 로봇 좌표를 <strong>실시간으로 전송하는 파이프라인</strong>을 구축했습니다.
-            로봇의 위치 정보를 다른 모듈(음성비서·관제)이 사용할 수 있도록 좌표 브릿지를 연결했습니다.
-</p> <div class="feature-files"> <code>RTAB-Map</code><code>좌표 전송 파이프라인</code><code>MQTT</code><code>gae_ws/src</code> </div> </article> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">03</span> <h3 class="feature-title">AI 음성비서 '싸라'</h3> </div> <p class="feature-body">
-음성 입력을 받아 자연어로 응답하는 <strong>AI 음성비서 '싸라'</strong>를 구현하고 성능을 최적화했습니다.
-            VSLAM 좌표·로봇 상태와 연동해 단순 질의응답을 넘어 로봇 맥락을 반영한 응답으로 확장했습니다.
-</p> <div class="feature-files"> <code>aivoice</code><code>OpenAI API</code><code>VSLAM 좌표 연동</code> </div> </article> </div> </div> </section>  <section class="detail-outro"> <div class="outro-inner"> <span class="outro-eyebrow">in the end</span> <h2 class="outro-title">모델은 한 번에 완성되지 않는다</h2> <p class="outro-text">
-YOLO를 v1에서 v7까지 반복하며, AI 모델은 한 번에 완성되는 게 아니라
-        데이터와 설정을 바꿔가며 <strong>성능을 검증하고 기록으로 남기는 사이클</strong>이라는 것을 체감했습니다.
-        로봇의 인식·위치·대화를 따로 만든 뒤 좌표로 잇는 경험은,
-        이후 특화 프로젝트의 시뮬↔웹 통합 파이프라인으로 자연스럽게 이어졌습니다.
+<link rel="stylesheet" href="/_astro/DetailLayout.DKQ0G_d5.css"></head> <body class="detail-body">  <nav class="capsule-nav-sticky show detail-nav"> <a href="/#introduce" class="cap-tab" data-section="introduce">HOME</a> <a href="/#skills" class="cap-tab" data-section="skills">SKILLS</a> <a href="/#projects" class="cap-tab active" data-section="projects">PROJECTS</a> </nav>   <header class="detail-hero ssara-hero"> <a href="/#projects" class="back-link">← Back to projects</a> </header>  <section class="detail-section"> <div class="detail-section-inner"> <span class="detail-eyebrow">PROJECT 02 · 공통 프로젝트</span> <p class="movwa-intro-tagline">
+자율주행 로봇 <strong>'싸라'</strong>가 노인의 말을 듣고, 주변을 인식하고, 보호자에게 알리는
+<strong>스마트 케어 솔루션</strong>.<br>
+AI 음성비서·YOLOv8 커스텀 모델·VSLAM 좌표 브릿지를 ROS 2 노드로 직접 구현했습니다.
+</p> <div class="detail-section-head"> <h2 class="detail-section-title">프로젝트 개요</h2> </div> <dl class="overview-list"> <div class="overview-row"><dt>프로젝트명</dt><dd>SSARA <span class="ov-sub">(SSAFY + SARA · 로봇 이름)</span></dd></div> <div class="overview-row"><dt>개발 기간</dt><dd>2026.01.13 ~ 02.13 (5주)</dd></div> <div class="overview-row"><dt>팀 구성</dt><dd>6명 (FE · BE · AI/Vision · ROS)</dd></div> <div class="overview-row"><dt>담당 역할</dt><dd>AI 음성비서 · YOLOv8 커스텀 모델 학습 · VSLAM 브릿지</dd></div> </dl> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">기획 배경</h2> <p class="detail-section-lead">
+고령 인구 증가와 독거 노인의 안전 사각지대를 줄이기 위해, 자율주행 로봇이
+<strong>음성 명령을 받고·실내를 인식하며·보호자와 연결</strong>되는 케어 플랫폼을 기획했습니다.
+          저는 로봇의 '귀와 입'(AI 음성비서)과 '눈'(YOLOv8 객체탐지), '위치 감각'(VSLAM 브릿지) 세 영역을 맡았습니다.
+</p> </div> <div class="stat-row"> <div class="stat-card"> <span class="stat-num">5</span> <span class="stat-label">MR</span> <span class="stat-desc">병합된 피처 브랜치 (!3·!8·!9·!48·!52)</span> </div> <div class="stat-card"> <span class="stat-num">v1→v7</span> <span class="stat-label">YOLO ITER</span> <span class="stat-desc">커스텀 데이터셋 7회 반복 학습</span> </div> <div class="stat-card"> <span class="stat-num">3×</span> <span class="stat-label">FASTER</span> <span class="stat-desc">base → tiny 교체로 STT 응답 속도</span> </div> <div class="stat-card"> <span class="stat-num">10+</span> <span class="stat-label">COMMANDS</span> <span class="stat-desc">멈춰·병원·보호자·시간 등 음성 명령 수</span> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">내가 사용한 기술과 선정 이유</h2> <p class="detail-section-lead">
+ROS 2 노드 하나가 STT → 명령 파싱 → 로봇 제어 / 웹 전송까지 이어지는 파이프라인을 담당합니다.
+          응답 속도·오프라인 안정성·팀원과의 데이터 계약을 기준으로 기술을 선택했습니다.
+</p> </div> <div class="stack-row"> <div class="stack-card"> <h4 class="stack-name">faster-whisper (STT)</h4> <p class="stack-reason">base → tiny 교체로 추론 속도 ~3배 향상. initial_prompt로 한국어 발음 변형 힌트를 제공해 인식률 보정.</p> </div> <div class="stack-card"> <h4 class="stack-name">gTTS + espeak fallback</h4> <p class="stack-reason">자주 쓰는 응답은 시작 시 MP3 캐시 생성. 네트워크 오류 시 espeak 오프라인 fallback으로 TTS 안정화.</p> </div> <div class="stack-card"> <h4 class="stack-name">MQTT (paho)</h4> <p class="stack-reason">robot/command·robot/pose·guardian 토픽으로 ROS 2 ↔ 웹 양방향 연결. JSON 프로토콜 직접 설계.</p> </div> <div class="stack-card"> <h4 class="stack-name">RTAB-Map odom 브릿지</h4> <p class="stack-reason">BEST_EFFORT QoS 매칭, (0,0) 리셋·좌표 점프·떨림 4단계 필터링으로 SLAM 위치 노이즈 억제.</p> </div> <div class="stack-card"> <h4 class="stack-name">YOLOv8 (Ultralytics)</h4> <p class="stack-reason">실내 환경의 신호등·정지선·장애물 데이터셋 직접 구성. BoxF1·PR 커브 분석으로 v1→v7 반복 고도화.</p> </div> <div class="stack-card"> <h4 class="stack-name">ROS 2 launch 분리</h4> <p class="stack-reason">voice_map / voice_fast / voice_final 3개 launch 파일로 개발·최적화·배포 모드를 단계별로 분리. setup.py entry point 등록.</p> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">주요 기능 <span class="section-count">6</span></h2> <p class="detail-section-lead">
+SSARA 프로젝트의 주요 기능입니다. 이 중 내 담당(AI/Vision) 파트는 다음 섹션에서 자세히 다룹니다.
+</p> </div> <div class="allfeat-list"> <div class="allfeat-item"> <span class="allfeat-num">01</span> <div class="allfeat-text"><b>AI 음성비서 '싸라'</b><span>STT → 명령 파싱 → 로봇 제어 / 웹 알림 파이프라인. 멈춰·앞으로·병원·보호자 호출·시간 등 10+ 명령.</span></div> </div> <div class="allfeat-item"> <span class="allfeat-num">02</span> <div class="allfeat-text"><b>YOLOv8 신호등·정지선 인식</b><span>커스텀 데이터셋 v1→v7 반복 학습. 빨간불 → 정지 / 초록불 → 출발 자동 반응.</span></div> </div> <div class="allfeat-item"> <span class="allfeat-num">03</span> <div class="allfeat-text"><b>VSLAM 실시간 위치 브릿지</b><span>RTAB-Map odom → MQTT robot/pose 중계. 4단계 노이즈 필터로 보호자 앱 위치 표시.</span></div> </div> <div class="allfeat-item"> <span class="allfeat-num">04</span> <div class="allfeat-text"><b>실내 지도 생성 (RTAB-Map)</b><span>도커 환경에서 SLAM 맵 PNG 생성. 팀 환경 세팅 가이드 문서화.</span></div> </div> <div class="allfeat-item"> <span class="allfeat-num">05</span> <div class="allfeat-text"><b>보호자 앱 연동</b><span>MQTT guardian 토픽으로 보호자에게 위치·긴급 메시지 전달.</span></div> </div> <div class="allfeat-item"> <span class="allfeat-num">06</span> <div class="allfeat-text"><b>Vue 기반 관리 웹</b><span>헬스케어·메모·커뮤니티·AI 비서 화면. MQTT 실시간 상태 표시. (FE 팀원 담당)</span></div> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">담당 기능 <span class="section-count">AI / Vision</span></h2> <p class="detail-section-lead">
+로봇이 사람의 말을 알아듣고 환경을 인식하는 두 가지 핵심 파이프라인을 담당했습니다.
+          STT부터 MQTT 웹 연동까지, ROS 2 노드로 직접 구현하고 반복 개선했습니다.
+</p> </div> <div class="feature-list"> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">01</span> <h3 class="feature-title">AI 음성비서 파이프라인 전체 구현</h3> </div> <p class="feature-body">
+마이크 입력 → faster-whisper STT → fuzzy matching 명령 분류 →
+<strong>멈춰 / 앞으로 / 병원·약국 검색 / 보호자 호출 / 현재 시간 / 거리 안내 / YOLO 신호등 반응</strong> 등
+            10+ 명령을 처리하는 ROS 2 노드를 구현했습니다.
+            인식 시작·종료를 beep 음으로 피드백하고, 자주 쓰는 응답은 시작 시 MP3로 미리 캐시합니다.
+</p> <div class="feature-label">개발 단계 (커밋 흐름)</div> <div class="flow-steps"> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text"><strong>tiny/small/base 모델 실험</strong> — 속도·인식률 트레이드오프 확인</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text"><strong>MQTT 웹 상호작용</strong> — robot/command · guardian 토픽 설계</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text"><strong>fuzzy matching + audio feedback</strong> — 발음 변형 대응, beep 피드백</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text"><strong>검색·시간·거리·단어장·YOLO 콜백</strong> — 명령 확장</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div></div> <div class="flow-text"><strong>voice_fast (final)</strong> — tiny 모델 + TTS 캐시 + espeak fallback 최적화 완성</div> </div> </div> <div class="feature-files"> <code>stt_module_map.py</code><code>stt_module_fast.py</code> <code>ai_voice_final.py</code><code>ai_voice_final_fix.py</code> <code>voice_map.launch.py</code><code>voice_fast.launch.py</code> </div> </article> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">02</span> <h3 class="feature-title">MQTT ↔ 웹 실시간 브릿지 설계</h3> </div> <p class="feature-body">
+음성 명령 결과를 <strong>robot/command</strong> 토픽으로 웹에 실시간 전송하고,
+            보호자 호출은 <strong>guardian</strong> 토픽으로 분리했습니다.
+            웹에서 기계어가 노출되지 않도록 <strong>type + display_text</strong> 구조의 JSON 프로토콜을 직접 설계해
+            프론트엔드가 파싱 없이 바로 렌더링할 수 있게 했습니다.
+</p> <div class="feature-label">메시지 포맷 예시</div> <pre class="code-block"># robot/command 토픽 전송 예시
+payload = {
+    "type": "navigation",
+    "display_text": "병원으로 이동을 시작합니다.",
+    "destination": "hospital",
+    "timestamp": "2026-02-06T03:11:08"
+}</pre> <div class="feature-files"> <code>stt_module_map.py</code><code>voice_map.launch.py</code> </div> </article> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">03</span> <h3 class="feature-title">VSLAM 좌표 브릿지 (pose_bridge_fix)</h3> </div> <p class="feature-body">
+RTAB-Map의 <strong>/rtabmap/odom</strong>을 구독해 MQTT <strong>robot/pose</strong>로 중계.
+            BEST_EFFORT QoS 매칭, (0,0) 리셋 감지, 좌표 점프 필터, 떨림 억제 4단계로
+            실내 SLAM 특성의 위치 노이즈를 처리했습니다.
+            보호자 앱의 실시간 위치 표시에 활용됩니다.
+</p> <div class="feature-label">핵심 처리 흐름</div> <div class="flow-steps"> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text"><code>/rtabmap/odom</code> 구독 (BEST_EFFORT QoS)</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div><div class="flow-line"></div></div> <div class="flow-text">(0,0) 리셋 감지 → 좌표 점프 필터 → 떨림 억제</div> </div> <div class="flow-step"> <div class="flow-dot-col"><div class="flow-dot"></div></div> <div class="flow-text">MQTT <code>robot/pose</code> JSON 퍼블리시</div> </div> </div> <div class="feature-files"> <code>pose_bridge_fix.py</code> </div> </article> <article class="feature-card"> <div class="feature-head"> <span class="feature-num">04</span> <h3 class="feature-title">YOLOv8 커스텀 모델 학습 (v1–v7)</h3> </div> <p class="feature-body">
+실내 환경의 <strong>신호등(빨간불/초록불) · 정지선 · 장애물</strong> 인식을 위해
+            데이터셋을 직접 구성하고 v1 → v7 총 7회 반복 학습.
+            각 버전마다 <strong>BoxF1 · PR 커브 · confusion matrix</strong>를 분석해
+            취약 클래스 데이터를 추가 수집하고 하이퍼파라미터를 조정했습니다.
+            최종 모델(best.pt v7)은 stt_module_fast의 YOLO 콜백에 연결해
+            "빨간불 → 정지 / 초록불 → 출발" 자동 반응을 구현했습니다.
+</p> <div class="feature-files"> <code>best.pt (v7)</code><code>dataset/ (커스텀 라벨)</code><code>stt_module_fast.py (YOLO callback)</code> </div> </article> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">트러블슈팅</h2> <p class="detail-section-lead">
+STT 지연·MQTT 연동·SLAM QoS·YOLO 인식률까지,
+          실시간 파이프라인에서 부딪힌 문제들과 해결.
+</p> </div> <div class="trouble-card"> <h3 class="trouble-title">STT 응답 지연 — base 모델 2~3초</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
+faster-whisper base 모델로 STT를 처리했을 때 명령 한 마디에 2~3초 지연이 발생.
+            로봇이 명령을 늦게 실행하거나, 사용자가 같은 말을 반복하는 문제가 생겼습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label cause">원인</span> <p class="trouble-text">
+base 모델의 파라미터 수(74M)가 실시간 명령 처리에 과했습니다.
+            간단한 명령어 인식에는 tiny(39M)로도 충분하지만,
+            한국어 발음 변형에 취약할 수 있었습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label solve">해결</span> <pre class="code-block"># base → tiny 교체 + initial_prompt로 발음 힌트 제공
+self.model = WhisperModel("tiny", device="cpu", compute_type="int8")
+
+# 발음 변형 힌트 (싸라·병원·멈춰 등 핵심 단어)
+context_words = "싸라, 사라, 병원, 약국, 멈춰, 앞으로, 보호자..."
+segments, _ = self.model.transcribe(wav_buffer, language="ko",
+                                     initial_prompt=context_words)</pre> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
+응답 속도 ~3배 향상. 발음 변형은 initial_prompt + fuzzy matching 조합으로 보완해
+            인식률 하락 없이 속도를 개선했습니다.
+</p> </div> </div> <div class="trouble-card"> <h3 class="trouble-title">웹에 JSON 기계어 노출</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
+초기에 MQTT 메시지를 그대로 웹으로 전송했더니 보호자 앱 화면에
+            JSON 키값이나 명령 코드가 그대로 표시됐습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label cause">원인</span> <p class="trouble-text">
+ROS 2 노드 내부 명령 코드(navigation, guardian_alert 등)와
+            UI 표시 문자열이 분리되지 않은 채로 전송됐습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label solve">해결</span> <pre class="code-block"># type(내부 코드)과 display_text(UI 표시용)를 분리
+payload = {
+    "type": "guardian_alert",
+    "display_text": "보호자에게 메시지를 보냈습니다.",
+    "location": {x: pos_x, y: pos_y},
+    "timestamp": now.isoformat()
+}
+self.mqtt_client.publish("guardian", json.dumps(payload))</pre> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
+프론트엔드는 <code>display_text</code>만 렌더링하면 되는 계약이 명확해졌고,
+            팀 내 MQTT 메시지 포맷을 표준화하는 계기가 됐습니다.
+</p> </div> </div> <div class="trouble-card"> <h3 class="trouble-title">RTAB-Map odom QoS 불일치로 위치 수신 불가</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
+pose_bridge 노드가 /rtabmap/odom을 구독했지만 메시지를 전혀 수신하지 못했습니다.
+            토픽 자체는 존재했고, 다른 노드에서는 같은 토픽이 정상 동작했습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label cause">원인</span> <p class="trouble-text">
+RTAB-Map은 /rtabmap/odom을 <strong>BEST_EFFORT</strong>로 퍼블리시하는데,
+            구독자의 QoS가 기본값 RELIABLE로 설정되어 있어 ROS 2 QoS 협상이 실패했습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label solve">해결</span> <pre class="code-block">from rclpy.qos import QoSProfile, ReliabilityPolicy
+
+# 퍼블리셔(RTAB-Map)와 동일하게 BEST_EFFORT로 맞춤
+qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
+self.subscription = self.create_subscription(
+    Odometry, '/rtabmap/odom', self.listener_callback, qos
+)</pre> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
+위치 수신 즉시 정상화. 이후 수신된 좌표에 4단계 필터를 추가해
+            실내 SLAM 노이즈(좌표 점프·떨림)도 처리했습니다.
+</p> </div> </div> <div class="trouble-card"> <h3 class="trouble-title">YOLOv8 v1~v4 낮은 인식률</h3> <div class="trouble-block"> <span class="trouble-label problem">문제</span> <p class="trouble-text">
+1차 데이터셋으로 학습한 v1 모델은 실내 조명과 배경에 따라
+            신호등·정지선 인식률이 기대에 크게 못 미쳤습니다.
+            특히 일부 클래스(정지선)는 Recall이 매우 낮았습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label cause">원인</span> <p class="trouble-text">
+초기 데이터셋의 클래스 불균형과 실내 조명·각도 다양성 부족.
+            데이터 수량보다 환경 다양성이 더 중요한 문제였습니다.
+</p> </div> <div class="trouble-block"> <span class="trouble-label solve">해결</span> <p class="trouble-text">
+각 버전(v1~v7)마다 <strong>BoxF1 곡선 · PR 커브 · confusion matrix</strong>를 분석해
+            취약 클래스의 데이터를 우선 추가 수집하고, augmentation(밝기·회전·크롭)을 강화.
+            v4부터 안정적인 인식률 확보, v7에서 목표치 달성 후 stt_module_fast YOLO 콜백에 연결.
+</p> </div> <div class="trouble-block"> <span class="trouble-label learn">결과</span> <p class="trouble-text">
+단순히 epoch를 늘리는 것보다 <strong>데이터 품질·클래스 균형</strong>이 성능에 더 크게 영향한다는 걸 직접 확인했습니다.
+            이후 AI 파이프라인 디버깅 시 먼저 confusion matrix를 보는 습관이 생겼습니다.
+</p> </div> </div> </div> </section>  <section class="detail-outro"> <div class="outro-inner"> <span class="outro-eyebrow">retrospective</span> <h2 class="outro-title">파이프라인을 단계별로 쪼개는 것의 힘</h2> <p class="outro-text">
+가장 크게 배운 점은 AI 파이프라인은 모델 성능보다
+        "어느 단계에서 무엇이 실패하는지"를 빠르게 파악하는 구조가 더 중요하다는 것이었습니다.
+        STT 지연인지, 명령 파싱 오류인지, MQTT 전송 문제인지 분리해서 볼 수 있게
+        launch 파일과 노드를 단계별로 나눠놓은 것이 디버깅 속도를 크게 줄였습니다.
+        다음엔 fuzzy matching 대신 경량 분류 모델을 붙여 명령 오인식을 줄여보고 싶습니다.
 </p> <a href="/#projects" class="outro-back">← 다른 프로젝트 보기</a> </div> </section>  <footer class="footer"> <span>© 2026 김태연. All rights reserved.</span> <span class="footer-sub">Made with ☕ &amp; ✦</span> </footer>  </body></html>
