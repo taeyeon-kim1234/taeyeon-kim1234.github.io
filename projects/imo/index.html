@@ -3,10 +3,11 @@
 EMG·IMU 센서, 라즈베리파이, 스마트글래스 HUD까지 묶어 <strong>운동 중에 바로 피드백</strong>을 주는
         Flutter 코칭 앱. 50Hz 센서 스트림을 80ms 단위로 안정적인 UI로 풀어냈습니다.
 </p> <div class="detail-section-head"> <h2 class="detail-section-title">프로젝트 개요</h2> </div> <dl class="overview-list"> <div class="overview-row"><dt>프로젝트명</dt><dd>IMO <span class="ov-sub">(Inside Muscle Out · 차세대 IoT 헬스케어 코칭)</span></dd></div> <div class="overview-row"><dt>개발 기간</dt><dd>2026.04 ~ 05 (6주)</dd></div> <div class="overview-row"><dt>팀 구성</dt><dd>6인 (FW · Pi · BE · AI · APP)</dd></div> <div class="overview-row"><dt>담당 역할</dt><dd>APP / Frontend — Flutter 앱, Pi WebSocket 연동, 스마트글래스 HUD, 세션 결과/기록/통계, SVG 근육 히트맵</dd></div> <div class="overview-row"><dt>저장소</dt><dd>SSAFY GitLab · S14P31C203 <span class="ov-sub">(사내 비공개)</span></dd></div> </dl> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">기획 배경</h2> <p class="detail-section-lead">
-홈트레이닝 환경에서 사용자는 자신의 자세, 반복 횟수, 근육 사용 상태를
+2025년 국민 생활체육 참여율은 <strong>62.9%(+2.2%p)</strong>로 매년 느는 반면,
+          홈트레이닝 환경에서는 자신의 자세·반복 횟수·근육 사용 상태를
           운동 <em>중에</em> 확인하기 어렵습니다.
           거울/영상/PT의 한계를 넘어 운동 중 즉시 피드백이 가능한 환경을 만들고 싶었습니다.
-</p> </div> <div class="stat-row"> <div class="stat-card"> <span class="stat-num">62.9%</span> <span class="stat-label">참여율</span> <span class="stat-desc">2025 국민 생활체육 참여율 (+2.2%p)</span> </div> <div class="stat-card"> <span class="stat-num">4+3</span> <span class="stat-label">SENSORS</span> <span class="stat-desc">EMG 4채널 + IMU 3개</span> </div> <div class="stat-card"> <span class="stat-num">50Hz</span> <span class="stat-label">SAMPLING</span> <span class="stat-desc">20ms 주기 ESP32 송신</span> </div> <div class="stat-card"> <span class="stat-num">64B</span> <span class="stat-label">PACKET</span> <span class="stat-desc">BINARY_V2, JSON 대비 71.9% 감소</span> </div> </div> <div class="brand-block"> <div class="feature-label">서비스 네이밍 & 캐릭터</div> <p style="margin-bottom:14px;"> <strong>IMO = Inside Muscle Out</strong> — 안에서부터 근육을 깨운다는 의미.
+</p> </div> <div class="brand-block"> <div class="feature-label">서비스 네이밍 & 캐릭터</div> <p style="margin-bottom:14px;"> <strong>IMO = Inside Muscle Out</strong> — 안에서부터 근육을 깨운다는 의미.
           스마트글래스 캐릭터 <strong>아이(I)</strong>와 운동 캐릭터 <strong>모(Mo)</strong>로 브랜드를 구성했습니다.
 </p> <figure class="shot shot-full" style="margin-top:0;"> <img src="/assets/imo/naming.png" alt="IMO 마스코트 아이(I) · 모(Mo) 네이밍" loading="lazy"> </figure> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">내가 사용한 APP / FE 기술</h2> <p class="detail-section-lead">
 실시간 센서 stream과 화면 상태의 균형을 잡기 위해,
@@ -114,7 +115,9 @@ Pi WebSocket부터 스마트글래스 HUD, 결과 저장, SVG 히트맵까지
 <span class="line"><span style="color:#E1E4E8">  );</span></span>
 <span class="line"><span style="color:#E1E4E8">});</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6A737D">// AppScaffold(nested: true) → shell 내부 Scaffold 중첩 방지</span></span></code></pre> </div> </div> </div> </div> </div> </section>  <section class="detail-outro"> <div class="outro-inner"> <span class="outro-eyebrow">retrospective</span> <h2 class="outro-title">실시간을 안정적으로 다룬다는 것</h2> <p class="outro-text">
+<span class="line"><span style="color:#6A737D">// AppScaffold(nested: true) → shell 내부 Scaffold 중첩 방지</span></span></code></pre> </div> </div> </div> </div> </div> </section>  <section class="detail-section"> <div class="detail-section-inner"> <div class="detail-section-head"> <h2 class="detail-section-title">성과 지표</h2> <p class="detail-section-lead">
+운동 중 실시간 피드백을 위해 다룬 센서·통신 핵심 수치입니다.
+</p> </div> <div class="stat-row"> <div class="stat-card"> <span class="stat-num">4+3</span> <span class="stat-label">센서 구성</span> <span class="stat-desc">EMG 4채널 + IMU 3개</span> </div> <div class="stat-card"> <span class="stat-num">50Hz</span> <span class="stat-label">센서 샘플링</span> <span class="stat-desc">20ms 주기 ESP32 송신</span> </div> <div class="stat-card"> <span class="stat-num">64B</span> <span class="stat-label">패킷 크기</span> <span class="stat-desc">BINARY_V2 · JSON 대비 71.9%↓</span> </div> </div> </div> </section>  <section class="detail-outro"> <div class="outro-inner"> <span class="outro-eyebrow">retrospective</span> <h2 class="outro-title">실시간을 안정적으로 다룬다는 것</h2> <p class="outro-text">
 가장 크게 배운 점은 실시간 센서 앱은 "데이터를 받는다"보다
         "앱이 어떤 단위와 상태로 해석할지 정한다"가 더 중요하다는 점이었습니다.
         Pi에서 들어오는 메시지 빈도, 결측 상태, 센서 미부착 상태, 단위 스케일이 정리되지 않으면
